@@ -1,0 +1,241 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter} %Options for format can be included here
+
+\input{EucallStyle}
+
+% Switch off the tikz notice at the bottom
+\tikzposterlatexaffectionproofoff
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ % Title, Author, Institute
+ \title{\hspace*{0.2\textwidth}\parbox{0.7\textwidth}{\centering Simulation of Experiments for European Laser Light Sources}}
+ \author{\hspace*{0.2\textwidth}{\parbox{0.7\textwidth}{\centering%
+ C. Fortmann-Grote$^{1}$,
+ A. Andreev$^{2}$,
+ S. Aogaki$^{3}$,
+ R. Briggs$^{4}$,
+ M. Bussmann$^{5}$,
+ M. Garten$^{5}$,
+ M. Glass$^{4}$,
+ A. Grund$^{5}$,
+ A. H\"ubl$^{5}$,
+ Y. Kemp$^{6}$,
+ T. Kluge$^{5}$,
+ A. Mancuso$^{1}$,\\
+ S. Pascarelli$^{4}$,
+ M. S\'anchez del R\'io$^{4}$,
+ F. Schl\"unzen$^{6}$,
+ S. Sternberger$^{6}$,
+ R. Torchio$^{4}$,
+ T. Vinci$^{7}$,
+ J. Vorberger$^{5}$,
+ R. Widera$^{5}$
+ }}}
+ \institute{\hspace*{0.2\textwidth}{\parbox{0.7\textwidth}{\centering\small%
+ $^{1}$European XFEL, Hamburg, Germany,
+ $^{2}$ELI-ALPS, Szeged, Hungary,
+ $^{3}$ELI-NP, Bucharest, Romania,
+ $^{4}$ESRF, Grenoble, France,
+ $^{5}$HZDR, Dresden, Germany,
+ $^{6}$DESY, Hamburg, Germany,
+ $^{7}$LULI, Paris, France
+ }}}
+
+ %Choose Layout
+\usetheme{Eucall}
+
+\begin{document}
+
+% Title block with title, author, logo, etc.
+\maketitle
+%%%
+\begin{columns}
+%%%%%%%%%%%%%%% FIRST column
+\column{0.5}%
+%%%
+\block{Building a photon science simulation platform}{%
+\includegraphics[width=0.9\colwidth,angle=0,clip]{simS2E_workflow}
+}
+%%%
+\block{In-situ simulation of x-ray diffraction in underdense plasmas}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Particle-In-Cell simulation of laser-plasma interaction}
+    {%
+    \begin{center}
+      \includegraphics[width=.9\textwidth,angle=0,clip]{hzdr_pic_00130.png}%
+    \end{center}
+    }%
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Non-equilibrium population kinetics (scFLY)}
+    {%
+    \vspace*{0.9ex}
+    \begin{center}
+      \includegraphics[width=.9\textwidth,angle=0,clip]{hzdr_scfly.png}%
+    \end{center}
+    \vspace*{0.9ex}
+    }%
+  \end{minipage}
+\end{minipage}
+}%
+% ELI-NP
+\block{Secondary particle generation for nuclear physics studies}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+  \begin{minipage}[][.13\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {ELI-NP facility and beamlines}
+    {%
+      \vspace*{2.2ex}
+      \begin{center}
+      \includegraphics[width=.925\textwidth,angle=0,clip]{eli-np_model.png}%
+      \end{center}
+      \vspace*{2.2ex}
+    }%
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[][.13\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Geant4 simulation of secondary particles} {%
+    \begin{center}
+      \includegraphics[width=.9\textwidth,angle=0,clip]{eli-np_sim_00080}
+    \end{center}
+    }%
+  \end{minipage}
+\end{minipage}
+}
+% DESY HPC
+\block{HPC infrastructure at DESY-Hamburg}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Current infrastructure}
+    {%
+      \vspace*{2.2ex}
+      \begin{center}
+      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_status}%
+      \end{center}
+      \vspace*{2.2ex}
+    }%
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Future development} {%
+    \begin{center}
+      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_future}%
+    \end{center}
+    }%
+  \end{minipage}
+\end{minipage}
+}
+%%%%%%%%%%%%%%% SECOND column
+\column{0.5}
+\useblockstyle{EucallRight}
+% ESRF beam propagation
+\block{Virtual synchrotron experiments}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+  \begin{minipage}[][.13\textheight][t]{.49\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Modular framework for x-ray optics simulations}
+    {%
+    \vspace*{2.25ex}
+    \begin{center}
+      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_toolchain}
+      \scriptsize\sf
+      Propagation of synchrotron radiation and secondary particles to the sample interaction point.
+    \end{center}
+    \vspace*{2.25ex}
+    }%
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[][.13\textheight][t]{.49\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {XPD shadowgraphy}{%
+    \begin{center}
+      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_xpd_shadowgraphy}
+    \end{center}
+    }%
+  \end{minipage}
+\end{minipage}
+}
+% ESRF WDM Diagnostics
+\block{X-ray diagnostics of Warm Dense Iron:\\ Simulation and experiment}{%
+\begin{minipage}[ ]{0.5\textwidth}%
+  \centering%
+  \includegraphics[width=0.49\textwidth,angle=0,clip]{esrf_Fe_targets_eos}%
+  \includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}%
+\end{minipage}
+\includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_xas_position}
+}
+% ELI-ALPS
+\block{Simulation of over- and underdense plasmas: radiation transport}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Laser-plasma acceleration in cone shaped targets}
+    {%
+    \begin{center}
+      \includegraphics[width=.9\textwidth,angle=0,clip]{eli-alps_e-ion_laser_acceleration.png}\\
+      \scriptsize\sf
+      Evolution of electron (blue) and ion (red)
+      density distribution. Laser intensity $= 10^{20} W/cm^2$,  max. proton energy  = 40 MeV.
+    \end{center}
+    }%
+  \end{minipage}
+  \hfill%
+  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+    {Electron transport in nanowires} {%
+    \vspace*{1ex}
+    \begin{center}
+    \includegraphics[width=.9\textwidth,angle=0,clip]{eli-alps_wire_targets}
+    \end{center}
+    \vspace*{1ex}
+    }%
+  \end{minipage}
+\end{minipage}
+}
+\end{columns}
+\block{}{%
+\begin{tikzpicture}%
+  \draw (0,0) -- ( \textwidth - 4.5cm, 0);
+\end{tikzpicture}\\[1ex]
+\begin{minipage}{0.3\textwidth}%
+  \noindent%
+  {\sf\huge%
+  Contact: carsten.grote@xfel.eu\\%
+  \noindent%
+  Webpage: www.eucall.eu\\[2ex]
+  }%
+  \begin{minipage}{0.2\textwidth}%
+    \includegraphics[width=1.0\textwidth]{eu_flag}%
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}{0.79\textwidth}%
+    \sf\small
+  This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No
+  654220\\
+  \end{minipage}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[ ]{0.35\textwidth}%
+  \includegraphics[width=\textwidth,angle=0,clip]{eucall_institutes}%
+\end{minipage}%
+}
+
+\end{document}
+
+
+

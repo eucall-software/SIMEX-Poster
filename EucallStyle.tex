@@ -1,0 +1,86 @@
+\definecolorstyle{Eucall}{%
+  \definecolor{ECGreen}{HTML}{98CE7C}%
+  \definecolor{ECYellow}{HTML}{F2E560}%
+  \definecolor{ECYellowGreen}{HTML}{D6DA36}%
+}%
+{
+  % Background Colors
+  \colorlet{backgroundcolor}{white}
+  \colorlet{framecolor}{black}
+  % Title Colors
+  \colorlet{titlefgcolor}{white}
+  %\colorlet{titlebgcolor}{ECGreen!50!ECYellowGreen}
+  \colorlet{titlebgcolor}{ECGreen}
+  % Block Colors
+  %\colorlet{blocktitlebgcolor}{ECGreen!50!ECYellowGreen}
+  \colorlet{blocktitlebgcolor}{ECGreen}
+  \colorlet{blocktitlefgcolor}{white}
+  \colorlet{blockbodybgcolor}{white}
+  \colorlet{blockbodyfgcolor}{black}
+  % Innerblock Colors
+  %\colorlet{innerblocktitlebgcolor}{ECYellowGreen!50!ECYellow}
+  \colorlet{innerblocktitlebgcolor}{ECYellowGreen}
+  \colorlet{innerblocktitlefgcolor}{black}
+  \colorlet{innerblockbodybgcolor}{white}
+  \colorlet{innerblockbodyfgcolor}{black}
+  % Note colors
+  \colorlet{notefgcolor}{black}
+  %\colorlet{notebgcolor}{ECGreen!50!ECYellowGreen}
+  \colorlet{notebgcolor}{ECGreen}
+  \colorlet{noteframecolor}{black}
+}
+
+\definetitlestyle{Eucall}{%
+    width=0.95\paperwidth, roundedcorners=30, linewidth=0.0cm, innersep=1cm,
+    titletotopverticalspace=15mm, titletoblockverticalspace=20mm,
+    titlegraphictotitledistance=0pt, titletextscale=1
+}{%
+    \begin{scope}[line width=\titlelinewidth, rounded corners=\titleroundedcorners]%
+      \coordinate (bottomleft) at (\titleposleft+0.2\textwidth, \titleposbottom);%
+      \coordinate (topright) at (\titleposright, \titlepostop);%
+      \pgftext[right, x=\titleposleft+0.18\textwidth, y=0.5\titlepostop+0.5\titleposbottom]{\includegraphics[width=0.18\textwidth]{eucall_logo.png}}%
+      \draw[draw=none, left color=ECGreen, right color=ECYellowGreen](bottomleft) rectangle (topright);%
+    \end{scope}%
+}
+
+\defineblockstyle{EucallLeft}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=-10pt,
+    bodyverticalshift=0pt, roundedcorners=30, linewidth=0.0cm,
+    titleinnersep=1cm, bodyinnersep=1cm
+}{%
+    \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]%
+        \ifBlockHasTitle %
+           \draw[left color=ECGreen, right color=ECYellowGreen] (blocktitle.south west) rectangle (blocktitle.north east);
+           \draw[draw=none, fill=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
+        \else
+           \draw[draw=none, fill=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
+        \fi
+    \end{scope}
+}
+\defineblockstyle{EucallRight}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=-10pt,
+    bodyverticalshift=0pt, roundedcorners=30, linewidth=0.0cm,
+    titleinnersep=1cm, bodyinnersep=1cm
+}{
+    \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]
+        \ifBlockHasTitle %
+           \draw[left color=ECYellowGreen, right color=ECYellow] (blocktitle.south west) rectangle (blocktitle.north east);
+           \draw[draw=none, color=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
+        \else
+           \draw[draw=none, color=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
+        \fi
+    \end{scope}
+}
+
+
+
+\definelayouttheme{Eucall}{%
+  \usecolorstyle{Eucall}
+  %\usecolorstyle{default}
+  \usebackgroundstyle{Default}
+  \usetitlestyle{Eucall}
+  \useblockstyle{EucallLeft}
+  \usenotestyle{Default}
+}
