@@ -25,7 +25,7 @@
  A. H\"ubl$^\text{5}$,
  Y. Kemp$^\text{6}$,
  T. Kluge$^\text{5}$,\\
- A. Mancuso$^\text{1}$,
+ A. P. Mancuso$^\text{1}$,
  S. Pascarelli$^\text{4}$,
  M. S\'anchez del R\'io$^\text{4}$,
  F. Schl\"unzen$^\text{6}$,\\
@@ -57,79 +57,171 @@
 %%%%%%%%%%%%%%% FIRST column
 \column{0.5}%
 %%%
-\block{Building a photon science simulation platform}{%
-\includegraphics[width=0.9\colwidth,angle=0,clip]{simS2E_workflow}
-}
-%%%
-\block{X-ray diffraction in underdense plasmas}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-  \begin{minipage}[][.15\textheight][t]{.975\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
+\block[bodyoffsetx=-20pt]{X-ray diffraction in underdense plasmas}{%
+    \innerblock[titleleft, titleoffsetx=10pt,bodyoffsetx=10pt]
     {Identifying Plasma Instabilities by Small Angle X-Ray Scattering}
     {%
+    \begin{minipage}[ ]{.95\colwidth}
+      \includegraphics[width=.5\textwidth,angle=0,clip]{bussmann_saxs.pdf}%
+      \hfill%
+      \includegraphics[width=.5\textwidth,angle=0,clip]{bussmann_saxs_instabilities.pdf}%
+    \end{minipage}
+    }%
+    \vspace*{1ex}
+    \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]
+    { Outlook: Combine PIC simulations with population kinetics (scFLY)}
+    {%
+      \begin{minipage}[ ]{.9\colwidth}
+        \mbox{}%
+        \begin{minipage}[][][t]{.49\textwidth}
+          \begin{center}
+            \includegraphics[width=.4\colwidth,angle=0,clip]{scfly.png}%
+          \end{center}
+        \end{minipage}
+        \begin{minipage}[][][t]{.49\textwidth}
+          \begin{itemize}
+            \item Multiple photon scattering
+            \item Atomic configurations
+            \item Collisions
+            \item Collisional and field ionization
+            \item Radiation transport
+            \item Recombination
+          \end{itemize}
+        \end{minipage}
+      \end{minipage}
+    }%
+}%
+\column{0.5}
+\useblockstyle{EucallRight}
+%%%
+% ESRF WDM Diagnostics
+\block[bodyoffsetx=-30pt]{X-ray diagnostics of Warm Dense Iron}{%
+  \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{Combining x-ray absorption spectroscopy with shock compression}{
+  \begin{center}
+    \includegraphics[width=0.45\colwidth,angle=0,clip, bb=0 0 700 470]{esrf_Fe_targets_eos}%
+    \includegraphics[width=0.45\colwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}\\
+    \includegraphics[width=0.8\colwidth,angle=0,clip]{esrf_Fe_xas_position}
+  \end{center}
+  }
+}
+\end{columns}
+\begin{columns}
+  \column{0.2}
+  \useblockstyle{EucallLeft}
+  % ESRF beam propagation
+\block[bodyoffsetx=-15pt,titleoffsetx=-10pt]{Synchrotron simulations}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {X-ray optics}
+    {%
     \begin{center}
-      \includegraphics[width=.49\textwidth,angle=0,clip]{bussmann_saxs.pdf}%
-      %\hfill%
-      \includegraphics[width=.49\textwidth,angle=0,clip]{bussmann_saxs_instabilities.pdf}%
+      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_toolchain}
+      \scriptsize\sf
+      Propagation of synchrotron radiation and secondary particles to the sample interaction point.
     \end{center}
-    Outlook: Combine PIC simulations with population kinetics (scFLY).
+    }%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {XPD shadowgraphy}{%
+    \begin{center}
+      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_xpd_shadowgraphy}
+    \end{center}
+    }%
+\end{minipage}
+}
+\column{0.6}
+\useblockstyle{EucallCenter}
+\block[bodyoffsetx=0pt]{Building a photon science simulation platform}{%
+\begin{center}
+  \includegraphics[height=0.19\textheight, width=0.95\colwidth,angle=0,clip]{simS2E_workflow}
+\end{center}
+}
+
+\column{0.2}
+  \useblockstyle{EucallRight}
+% DESY HPC
+\block[bodyoffsetx=-5pt]{DESY HPC infrastructure}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {Current infrastructure}
+    {%
+      \begin{center}
+      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_status}%
+      \end{center}
+    }%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {Future development} {%
+    \begin{center}
+      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_future}%
+    \end{center}
+    }%
+\end{minipage}
+}
+\end{columns}
+\begin{columns}
+
+%%%%%%%%%%%%%%% SECOND column
+\column{0.5}
+  \useblockstyle{EucallLeft}
+% ELI-ALPS
+\block{Radiation transport in complex targets}{%
+\begin{minipage}{.9\colwidth}%
+  \mbox{}%
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {Laser-plasma acceleration}
+    {%
+    \begin{center}
+      \vspace*{1.45ex}
+      \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_e-ion_laser_acceleration.png}\\
+      \scriptsize\sf
+      Evolution of electron (blue) and ion (red)
+      density distribution. Laser intensity $= 10^{20} W/cm^2$,  max. proton energy  = 40 MeV.\\
+      \vspace*{1.45ex}
+      {}
+    \end{center}
     }%
   \end{minipage}
-   %\hfill%
-  %\begin{minipage}[][.11\textheight][t]{.475\textwidth}%
-    %\innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    %bodyoffsetx=10pt]
-    %{}
-    %{%
-    %\begin{center}
-    %\end{center}
-    %}%
-  %\end{minipage}\\
-  %\begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    %\innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    %bodyoffsetx=10pt]
-    %{}
-    %{%
-    %\begin{center}
-      %\includegraphics[width=.9\textwidth,angle=0,clip]{bussmann_saxs_instabilities.pdf}%
-    %\end{center}
-    %}%
-  %\end{minipage}%
-  %\hfill%
-  %\begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    %\innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    %bodyoffsetx=10pt]
-    %{}
-    %{%
-    %\vspace*{0.9ex}
-    %\begin{center}
-      %\includegraphics[width=.9\textwidth,angle=0,clip]{hzdr_scfly.png}%
-    %\end{center}
-    %\vspace*{0.9ex}
-    %}%
-  %\end{minipage}
+  \hfill%
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {Electron transport in nanowires} {%
+    \vspace*{1.55ex}
+    \begin{center}
+    \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_wire_targets}
+    \end{center}
+    \vspace*{1.55ex}
+    }%
+  \end{minipage}
 \end{minipage}
-}%
+}
 % ELI-NP
+\column{0.5}
+\useblockstyle{EucallRight}
 \block{Secondary particle generation for nuclear physics}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
-  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
     {ELI-NP facility and beamlines}
     {%
-      \vspace*{2.2ex}
+      \vspace*{1.65ex}
       \begin{center}
       \includegraphics[width=.925\textwidth,angle=0,clip]{eli-np_model.png}%
       \end{center}
-      \vspace*{2.2ex}
+      \vspace*{1.65ex}
     }%
   \end{minipage}
   \hfill%
-  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
     {Secondary particles tracking} {%
@@ -140,115 +232,15 @@
   \end{minipage}
 \end{minipage}
 }
-% DESY HPC
-\block{HPC infrastructure at DESY-Hamburg}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Current infrastructure}
-    {%
-      \vspace*{2.2ex}
-      \begin{center}
-      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_status}%
-      \end{center}
-      \vspace*{2.2ex}
-    }%
-  \end{minipage}
-  \hfill%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Future development} {%
-    \begin{center}
-      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_future}%
-    \end{center}
-    }%
-  \end{minipage}
-\end{minipage}
-}
-%%%%%%%%%%%%%%% SECOND column
-\column{0.5}
-\useblockstyle{EucallRight}
-% ESRF beam propagation
-\block{Virtual synchrotron experiments}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {X-ray optics simulation platform}
-    {%
-    \vspace*{2.25ex}
-    \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_toolchain}
-      \scriptsize\sf
-      Propagation of synchrotron radiation and secondary particles to the sample interaction point.
-    \end{center}
-    \vspace*{2.25ex}
-    }%
-  \end{minipage}
-  \hfill%
-  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {XPD shadowgraphy}{%
-    \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_xpd_shadowgraphy}
-    \end{center}
-    }%
-  \end{minipage}
-\end{minipage}
-}
-% ESRF WDM Diagnostics
-\block[bodyoffsetx=-30pt]{X-ray diagnostics of Warm Dense Iron}{%
-\begin{minipage}[ ]{0.5\textwidth}%
-  \centering%
-  \includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_targets_eos}%
-  \includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}%
-\end{minipage}
-\includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_xas_position}
-}
-% ELI-ALPS
-\block{Radiation transport in complex targets}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Laser-plasma acceleration in Xy cone targets}
-    {%
-    \begin{center}
-      \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_e-ion_laser_acceleration.png}\\
-      \scriptsize\sf
-      Evolution of electron (blue) and ion (red)
-      density distribution. Laser intensity $= 10^{20} W/cm^2$,  max. proton energy  = 40 MeV.
-    \end{center}
-    }%
-  \end{minipage}
-  \hfill%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Electron transport in nanowires} {%
-    \vspace*{1ex}
-    \begin{center}
-    \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_wire_targets}
-    \end{center}
-    \vspace*{1ex}
-    }%
-  \end{minipage}
-\end{minipage}
-}
 \end{columns}
 \block{}{%
 \begin{tikzpicture}%
   \draw (0,0) -- ( \textwidth - 4.5cm, 0);
 \end{tikzpicture}\\[1ex]
-\begin{minipage}{0.3\textwidth}%
+\mbox{}
+\begin{minipage}[][][t]{0.25\textwidth}%
   \noindent%
-  {\sf\huge%
+  {\sf%
   Contact: carsten.grote@xfel.eu\\%
   \noindent%
   Webpage: www.eucall.eu\\[2ex]
@@ -260,14 +252,25 @@
   \begin{minipage}{0.79\textwidth}%
     \small
   This project has received funding from the \textit{European Union's Horizon 2020 research and
-  innovation programme} under grant agreement No
-  654220\\
+  innovation programme} under grant agreement No 654220.\\
   \end{minipage}%
 \end{minipage}%
-\hfill%
-\begin{minipage}[ ]{0.35\textwidth}%
+%\hfill%
+\begin{minipage}[][][t]{0.345\textwidth}%
   \includegraphics[width=\textwidth,angle=0,clip]{eucall_institutes}%
 \end{minipage}%
+\hfill%
+\begin{minipage}[][][t]{0.345\textwidth}
+  \small
+  \underline{References}
+  \begin{enumerate}
+    \item Placeholder PIConGPU
+    \item Placeholder WDM @ ESRF
+    \item Placeholder simS2E
+    \item Placeholder Andreev
+    \item Placeholder Aogaki
+  \end{enumerate}
+\end{minipage}
 }
 
 \end{document}
