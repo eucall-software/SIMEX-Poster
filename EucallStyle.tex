@@ -1,3 +1,6 @@
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
 \definecolorstyle{Eucall}{%
   \definecolor{ECGreen}{HTML}{98CE7C}%
   \definecolor{ECYellow}{HTML}{F2E560}%
@@ -44,14 +47,14 @@
 }
 
 \defineblockstyle{EucallLeft}{
-    titlewidthscale=1, bodywidthscale=1, titlecenter,
-    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=-10pt,
+    titlewidthscale=1, bodywidthscale=1, titleleft,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=25pt, %bodyoffsety=-10pt,
     bodyverticalshift=0pt, roundedcorners=30, linewidth=0.0cm,
     titleinnersep=1cm, bodyinnersep=1cm
 }{%
     \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]%
         \ifBlockHasTitle %
-           \draw[left color=ECGreen, right color=ECYellowGreen] (blocktitle.south west) rectangle (blocktitle.north east);
+           \draw[draw=none, left color=ECGreen, right color=ECYellowGreen] (blocktitle.south west) rectangle (blocktitle.north east);
            \draw[draw=none, fill=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
         \else
            \draw[draw=none, fill=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
@@ -59,14 +62,14 @@
     \end{scope}
 }
 \defineblockstyle{EucallRight}{
-    titlewidthscale=1, bodywidthscale=1, titlecenter,
-    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=-10pt,
+    titlewidthscale=1, bodywidthscale=1, titleleft,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=25pt, bodyoffsety=0pt,
     bodyverticalshift=0pt, roundedcorners=30, linewidth=0.0cm,
     titleinnersep=1cm, bodyinnersep=1cm
 }{
     \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]
         \ifBlockHasTitle %
-           \draw[left color=ECYellowGreen, right color=ECYellow] (blocktitle.south west) rectangle (blocktitle.north east);
+           \draw[draw=none, left color=ECYellowGreen, right color=ECYellow] (blocktitle.south west) rectangle (blocktitle.north east);
            \draw[draw=none, color=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);
         \else
            \draw[draw=none, color=blockbodybgcolor] (blockbody.south west) rectangle (blockbody.north east);

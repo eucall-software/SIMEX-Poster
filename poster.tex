@@ -1,5 +1,5 @@
 \documentclass[25pt, a0paper, portrait]{tikzposter} %Options for format can be included here
-
+\usepackage[]{amsmath}
 \input{EucallStyle}
 
 % Switch off the tikz notice at the bottom
@@ -11,37 +11,38 @@
 
 
  % Title, Author, Institute
- \title{\hspace*{0.2\textwidth}\parbox{0.7\textwidth}{\centering Simulation of Experiments for European Laser Light Sources}}
+ \title{\hspace*{0.2\textwidth}\parbox{0.7\textwidth}{\centering\bf Simulation of Experiments for
+ European Advanced Laser Light Sources}}
  \author{\hspace*{0.2\textwidth}{\parbox{0.7\textwidth}{\centering%
  C. Fortmann-Grote$^{1}$,
- A. Andreev$^{2}$,
- S. Aogaki$^{3}$,
- R. Briggs$^{4}$,
- M. Bussmann$^{5}$,
- M. Garten$^{5}$,
- M. Glass$^{4}$,
- A. Grund$^{5}$,
- A. H\"ubl$^{5}$,
- Y. Kemp$^{6}$,
- T. Kluge$^{5}$,
- A. Mancuso$^{1}$,\\
- S. Pascarelli$^{4}$,
- M. S\'anchez del R\'io$^{4}$,
- F. Schl\"unzen$^{6}$,
- S. Sternberger$^{6}$,
- R. Torchio$^{4}$,
- T. Vinci$^{7}$,
- J. Vorberger$^{5}$,
- R. Widera$^{5}$
+ A. Andreev$^\text{2}$,
+ S. Aogaki$^\text{3}$,
+ R. Briggs$^\text{4}$,
+ M. Bussmann$^\text{5}$,
+ M. Garten$^\text{5}$,
+ M. Glass$^\text{4}$,
+ A. Grund$^\text{5}$,
+ A. H\"ubl$^\text{5}$,
+ Y. Kemp$^\text{6}$,
+ T. Kluge$^\text{5}$,\\
+ A. Mancuso$^\text{1}$,
+ S. Pascarelli$^\text{4}$,
+ M. S\'anchez del R\'io$^\text{4}$,
+ F. Schl\"unzen$^\text{6}$,\\
+ S. Sternberger$^\text{6}$,
+ R. Torchio$^\text{4}$,
+ T. Vinci$^\text{7}$,
+ J. Vorberger$^\text{5}$,
+ R. Widera$^\text{5}$
  }}}
  \institute{\hspace*{0.2\textwidth}{\parbox{0.7\textwidth}{\centering\small%
- $^{1}$European XFEL, Hamburg, Germany,
- $^{2}$ELI-ALPS, Szeged, Hungary,
- $^{3}$ELI-NP, Bucharest, Romania,
- $^{4}$ESRF, Grenoble, France,
- $^{5}$HZDR, Dresden, Germany,
- $^{6}$DESY, Hamburg, Germany,
- $^{7}$LULI, Paris, France
+ $^\text{1}$European XFEL, Hamburg, Germany,
+ $^\text{2}$ELI-ALPS, Szeged, Hungary,
+ $^\text{3}$ELI-NP, Bucharest, Romania,
+ $^\text{4}$ESRF, Grenoble, France,
+ $^\text{5}$HZDR, Dresden, Germany,\\
+ $^\text{6}$DESY, Hamburg, Germany,
+ $^\text{7}$LULI, Paris, France
  }}}
 
  %Choose Layout
@@ -60,38 +61,64 @@
 \includegraphics[width=0.9\colwidth,angle=0,clip]{simS2E_workflow}
 }
 %%%
-\block{In-situ simulation of x-ray diffraction in underdense plasmas}{%
+\block{X-ray diffraction in underdense plasmas}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
-  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
-    {Particle-In-Cell simulation of laser-plasma interaction}
+  \begin{minipage}[][.15\textheight][t]{.975\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {Identifying Plasma Instabilities by Small Angle X-Ray Scattering}
     {%
     \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{hzdr_pic_00130.png}%
+      \includegraphics[width=.49\textwidth,angle=0,clip]{bussmann_saxs.pdf}%
+      %\hfill%
+      \includegraphics[width=.49\textwidth,angle=0,clip]{bussmann_saxs_instabilities.pdf}%
     \end{center}
+    Outlook: Combine PIC simulations with population kinetics (scFLY).
     }%
   \end{minipage}
-  \hfill%
-  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
-    {Non-equilibrium population kinetics (scFLY)}
-    {%
-    \vspace*{0.9ex}
-    \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{hzdr_scfly.png}%
-    \end{center}
-    \vspace*{0.9ex}
-    }%
-  \end{minipage}
+   %\hfill%
+  %\begin{minipage}[][.11\textheight][t]{.475\textwidth}%
+    %\innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    %bodyoffsetx=10pt]
+    %{}
+    %{%
+    %\begin{center}
+    %\end{center}
+    %}%
+  %\end{minipage}\\
+  %\begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    %\innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    %bodyoffsetx=10pt]
+    %{}
+    %{%
+    %\begin{center}
+      %\includegraphics[width=.9\textwidth,angle=0,clip]{bussmann_saxs_instabilities.pdf}%
+    %\end{center}
+    %}%
+  %\end{minipage}%
+  %\hfill%
+  %\begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    %\innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    %bodyoffsetx=10pt]
+    %{}
+    %{%
+    %\vspace*{0.9ex}
+    %\begin{center}
+      %\includegraphics[width=.9\textwidth,angle=0,clip]{hzdr_scfly.png}%
+    %\end{center}
+    %\vspace*{0.9ex}
+    %}%
+  %\end{minipage}
 \end{minipage}
 }%
 % ELI-NP
-\block{Secondary particle generation for nuclear physics studies}{%
+\block{Secondary particle generation for nuclear physics}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
-  \begin{minipage}[][.13\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
     {ELI-NP facility and beamlines}
     {%
       \vspace*{2.2ex}
@@ -102,11 +129,12 @@
     }%
   \end{minipage}
   \hfill%
-  \begin{minipage}[][.13\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
-    {Geant4 simulation of secondary particles} {%
+  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {Secondary particles tracking} {%
     \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{eli-np_sim_00080}
+      \includegraphics[width=.925\textwidth,angle=0,clip]{eli-np_sim_00080}
     \end{center}
     }%
   \end{minipage}
@@ -116,8 +144,9 @@
 \block{HPC infrastructure at DESY-Hamburg}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
-  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
     {Current infrastructure}
     {%
       \vspace*{2.2ex}
@@ -128,8 +157,9 @@
     }%
   \end{minipage}
   \hfill%
-  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
     {Future development} {%
     \begin{center}
       \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_future}%
@@ -145,9 +175,10 @@
 \block{Virtual synchrotron experiments}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
-  \begin{minipage}[][.13\textheight][t]{.49\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
-    {Modular framework for x-ray optics simulations}
+  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {X-ray optics simulation platform}
     {%
     \vspace*{2.25ex}
     \begin{center}
@@ -159,8 +190,9 @@
     }%
   \end{minipage}
   \hfill%
-  \begin{minipage}[][.13\textheight][t]{.49\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+  \begin{minipage}[][.13\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
     {XPD shadowgraphy}{%
     \begin{center}
       \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_xpd_shadowgraphy}
@@ -170,24 +202,25 @@
 \end{minipage}
 }
 % ESRF WDM Diagnostics
-\block{X-ray diagnostics of Warm Dense Iron:\\ Simulation and experiment}{%
+\block[bodyoffsetx=-30pt]{X-ray diagnostics of Warm Dense Iron}{%
 \begin{minipage}[ ]{0.5\textwidth}%
   \centering%
-  \includegraphics[width=0.49\textwidth,angle=0,clip]{esrf_Fe_targets_eos}%
+  \includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_targets_eos}%
   \includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}%
 \end{minipage}
 \includegraphics[width=0.45\textwidth,angle=0,clip]{esrf_Fe_xas_position}
 }
 % ELI-ALPS
-\block{Simulation of over- and underdense plasmas: radiation transport}{%
+\block{Radiation transport in complex targets}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
-  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
-    {Laser-plasma acceleration in cone shaped targets}
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
+    {Laser-plasma acceleration in Xy cone targets}
     {%
     \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{eli-alps_e-ion_laser_acceleration.png}\\
+      \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_e-ion_laser_acceleration.png}\\
       \scriptsize\sf
       Evolution of electron (blue) and ion (red)
       density distribution. Laser intensity $= 10^{20} W/cm^2$,  max. proton energy  = 40 MeV.
@@ -195,12 +228,13 @@
     }%
   \end{minipage}
   \hfill%
-  \begin{minipage}[][.1\textheight][t]{.45\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth]
+  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    bodyoffsetx=10pt]
     {Electron transport in nanowires} {%
     \vspace*{1ex}
     \begin{center}
-    \includegraphics[width=.9\textwidth,angle=0,clip]{eli-alps_wire_targets}
+    \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_wire_targets}
     \end{center}
     \vspace*{1ex}
     }%
@@ -224,8 +258,9 @@
   \end{minipage}%
   \hfill%
   \begin{minipage}{0.79\textwidth}%
-    \sf\small
-  This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No
+    \small
+  This project has received funding from the \textit{European Union's Horizon 2020 research and
+  innovation programme} under grant agreement No
   654220\\
   \end{minipage}%
 \end{minipage}%
