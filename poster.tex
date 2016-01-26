@@ -57,11 +57,11 @@
 %%%%%%%%%%%%%%% FIRST column
 \column{0.5}%
 %%%
-\block[bodyoffsetx=-20pt]{X-ray diffraction in underdense plasmas}{%
+\block[bodyoffsetx=-10pt]{X-ray diffraction in underdense plasmas}{%
     \innerblock[titleleft, titleoffsetx=10pt,bodyoffsetx=10pt]
     {Identifying Plasma Instabilities by Small Angle X-Ray Scattering}
     {%
-    \begin{minipage}[ ]{.95\colwidth}
+    \begin{minipage}[ ]{.9\colwidth}
       \includegraphics[width=.5\textwidth,angle=0,clip]{bussmann_saxs.pdf}%
       \hfill%
       \includegraphics[width=.5\textwidth,angle=0,clip]{bussmann_saxs_instabilities.pdf}%
@@ -69,7 +69,7 @@
     }%
     \vspace*{1ex}
     \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]
-    { Outlook: Combine PIC simulations [1] with population kinetics (scFLY [2])}
+    { Outlook: Combine PIC simulations [1] with population kinetics [2]}
     {%
       \begin{minipage}[ ]{.9\colwidth}
         \mbox{}%
@@ -95,12 +95,12 @@
 \useblockstyle{EucallRight}
 %%%
 % ESRF WDM Diagnostics
-\block[bodyoffsetx=-30pt]{X-ray diagnostics of Warm Dense Iron [3]}{%
+\block[bodyoffsetx=-10pt]{X-ray diagnostics of Warm Dense Iron [3]}{%
   \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{Combining x-ray absorption spectroscopy with shock compression}{
   \begin{center}
     \includegraphics[width=0.45\colwidth,angle=0,clip, bb=0 0 700 470]{esrf_Fe_targets_eos}%
     \includegraphics[width=0.45\colwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}\\
-    \includegraphics[width=0.8\colwidth,angle=0,clip]{esrf_Fe_xas_position}
+    \includegraphics[width=0.88\colwidth,height=0.333\colwidth,angle=0,clip]{esrf_Fe_xas_position}
   \end{center}
   }
 }
@@ -122,6 +122,7 @@
       Propagation of synchrotron radiation and secondary particles to the sample interaction point.
     \end{center}
     }%
+    \vspace*{1ex}
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
     {XPD shadowgraphy}{%
@@ -153,6 +154,7 @@
       \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_status}%
       \end{center}
     }%
+    \vspace*{1ex}
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
     {Future development} {%
@@ -169,7 +171,7 @@
 \column{0.5}
   \useblockstyle{EucallLeft}
 % ELI-ALPS
-\block{Radiation transport in complex targets [5,6]}{%
+\block{Radiation transport in complex targets [5]}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
   \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
@@ -205,7 +207,7 @@
 % ELI-NP
 \column{0.5}
 \useblockstyle{EucallRight}
-\block{Secondary particle generation for nuclear physics [8]}{%
+\block{Secondary particle generation for nuclear physics}{%
 \begin{minipage}{.9\colwidth}%
   \mbox{}%
   \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
@@ -224,7 +226,7 @@
   \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
-    {Secondary particles tracking} {%
+    {Secondary particles tracking [6]} {%
     \begin{center}
       \includegraphics[width=.925\textwidth,angle=0,clip]{eli-np_sim_00080}
     \end{center}
@@ -246,7 +248,7 @@
   Webpage: www.eucall.eu\\[2ex]
   }%
   \begin{minipage}{0.2\textwidth}%
-    \includegraphics[width=1.0\textwidth]{eu_flag}%
+    \includegraphics[width=1.0\textwidth]{eu-flag}%
   \end{minipage}%
   \hfill%
   \begin{minipage}{0.79\textwidth}%
@@ -263,14 +265,14 @@
 \begin{minipage}[][][t]{0.345\textwidth}
   \small
   \underline{References}
+  \setlength{\baselineskip}{6pt}
   \begin{enumerate}
-    \item Burau et al. IEEE Trans. Plasma Sc. \textbf{38} (2010).
-    \item Chung et al, High Energy Dens. Phys. \textbf{1} (2005).
+    \item Burau et al. IEEE Trans. Plasma Sc. \textbf{38} (2010), www.picongpu.org
+    \item Chung et al, HEDP \textbf{1} (2005).
     \item
     \item Yoon et al. submitted.
-    \item Lecz et al. Phys. Plasma \textbf{22} (2015)
-    \item Lecz et al. submitted
-    \item
+    \item Lecz et al. Phys. Plasma \textbf{22} (2015), Lecz et al. PRE \textbf{93} (2016).
+    \item Pentia et al. Nucl. Instr. Meth. Phys. Res. A \textbf{795} (2015).
   \end{enumerate}
 \end{minipage}
 }
