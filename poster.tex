@@ -59,7 +59,7 @@
 %%%
 \block[bodyoffsetx=-20pt]{X-ray diffraction in solid density plasmas}{%
     \innerblock[titleleft, titleoffsetx=10pt,bodyoffsetx=10pt]
-    {Identifying Plasma Instabilities by Small Angle X-Ray Scattering}
+    {Identifying plasma instabilities by small angle x-ray scattering}
     {%
     \begin{minipage}[ ]{.9\colwidth}
       \includegraphics[width=.5\textwidth,angle=0,clip]{bussmann_saxs.pdf}%
@@ -95,8 +95,8 @@
 \useblockstyle{EucallRight}
 %%%
 % ESRF WDM Diagnostics
-\block[bodyoffsetx=-10pt]{X-ray diagnostics of Warm Dense Iron [3]}{%
-  \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{Combining x-ray absorption spectroscopy with shock compression}{
+\block[bodyoffsetx=-10pt]{X-ray diagnostics of warm dense matter [3]}{%
+  \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{X-ray absorption spectroscopy in laser shock compressed iron}{
   \begin{center}
     \includegraphics[width=0.45\colwidth,angle=0,clip, bb=0 0 700 470]{esrf_Fe_targets_eos}%
     \includegraphics[width=0.45\colwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}\\
@@ -125,7 +125,7 @@
     \vspace*{1ex}
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
-    {XPD shadowgraphy}{%
+    {XPD \& shadowgraphy}{%
     \begin{center}
       \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_xpd_shadowgraphy}
     \end{center}
@@ -134,7 +134,7 @@
 }
 \column{0.6}
 \useblockstyle{EucallCenter}
-\block[bodyoffsetx=0pt]{Building a photon science simulation platform [4]}{%
+\block[bodyoffsetx=0pt]{We are building a photon science simulation platform [4].}{%
 \begin{center}
   \includegraphics[height=0.19\textheight, width=0.95\colwidth,angle=0,clip]{simS2E_workflow}
 \end{center}
@@ -148,7 +148,7 @@
   \mbox{}%
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
-    {Current infrastructure}
+    {Current status}
     {%
       \begin{center}
       \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_status}%
@@ -177,15 +177,15 @@
   \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
-    {Laser-plasma acceleration}
+    {Laser-plasma acceleration in carbon cones}
     {%
     \begin{center}
-      \vspace*{1.45ex}
+      %\vspace*{}
       \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_e-ion_laser_acceleration.png}\\
       \scriptsize\sf
       Evolution of electron (blue) and ion (red)
-      density distribution. Laser intensity $= 10^{20} W/cm^2$,  max. proton energy  = 40 MeV.\\
-      \vspace*{1.45ex}
+      density distribution. Laser intensity $= 10^{20} \text{W/cm}^2$,  max. proton energy  $= 40\,\text{MeV}$.\\
+      %\vspace*{1.00ex}
       {}
     \end{center}
     }%
@@ -194,12 +194,12 @@
   \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
     \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
     bodyoffsetx=10pt]
-    {Electron transport in nanowires} {%
-    \vspace*{1.55ex}
+    {Electron transport in carbon nanowires} {%
+    \vspace*{8pt}
     \begin{center}
     \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_wire_targets}
     \end{center}
-    \vspace*{1.55ex}
+    \vspace*{8pt}
     }%
   \end{minipage}
 \end{minipage}
@@ -236,6 +236,7 @@
 }
 \end{columns}
 \block{}{%
+\vspace*{2ex}
 \begin{tikzpicture}%
   \draw (0,0) -- ( \textwidth - 4.5cm, 0);
 \end{tikzpicture}\\[1ex]
@@ -247,36 +248,38 @@
   \noindent%
   Webpage: www.eucall.eu\\[2ex]
   }%
-  \begin{minipage}{0.2\textwidth}%
-    \includegraphics[width=1.0\textwidth]{eu-flag}%
-  \end{minipage}%
-  \hfill%
-  \begin{minipage}{0.79\textwidth}%
-    \small
-  This project has received funding from the \textit{European Union's Horizon 2020 research and
-  innovation programme} under grant agreement No 654220.\\
-  \end{minipage}%
-\end{minipage}%
-%\hfill%
-\begin{minipage}[][][t]{0.345\textwidth}%
-  \includegraphics[width=\textwidth,angle=0,clip]{eucall_institutes}%
+  \begin{minipage}{\textwidth}
+    \mbox{}%
+    \begin{minipage}[][][t]{0.2\textwidth}%
+      \includegraphics[width=1.0\textwidth]{eu-flag}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[][][t]{0.79\textwidth}%
+    \small%
+    This project has received funding from the \textit{European Union's Horizon 2020 research and
+    innovation programme} under grant agreement No 654220.
+    \end{minipage}%
+  \end{minipage}
 \end{minipage}%
 \hfill%
-\begin{minipage}[][][t]{0.345\textwidth}
+\begin{minipage}[][][t]{0.35\textwidth}%
+  \includegraphics[width=\textwidth,angle=0,clip]{eucall_institutes}%
+\end{minipage}%
+\hspace*{10pt}%
+\begin{minipage}[][][t]{0.34\textwidth}
   \small
   \underline{References}
-  \setlength{\baselineskip}{6pt}
+  %\setlength{\baselineskip}{6pt}
   \begin{enumerate}
-    \item Burau et al. IEEE Trans. Plasma Sc. \textbf{38} (2010), www.picongpu.org
+    \item Burau et al. IEEE Trans. Plasma Sc. \textbf{38} (2010); http://picongpu.hzdr.de .
     \item Chung et al, HEDP \textbf{1} (2005).
-    \item Torchio et al., submitted
-    \item Yoon et al. submitted.
-    \item Lecz et al. Phys. Plasma \textbf{22} (2015), Lecz et al. PRE \textbf{93} (2016).
+    \item Torchio et al., submitted.
+    \item Yoon et al., submitted.
+    \item Andreev et al., Phys. Plasmas \textbf{22} (2015); Lecz et al. PRE \textbf{93} (2016).
     \item Pentia et al. Nucl. Instr. Meth. Phys. Res. A \textbf{795} (2015).
   \end{enumerate}
 \end{minipage}
 }
-
 \end{document}
 
 
