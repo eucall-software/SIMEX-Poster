@@ -1,0 +1,42 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter} %Options for format can be included here
+\usepackage[]{amsmath}
+\input{EucallStyle}
+
+ %Choose Layout
+\usetheme{Eucall}
+
+%Reference counter
+\newcounter{refcounter}
+\setcounter{refcounter}{1}
+\newcommand{\getCounter}[1]{\arabic{#1}\stepcounter{#1}}
+
+% Switch off the tikz notice at the bottom
+\tikzposterlatexaffectionproofoff
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Title, Author, Institute
+\input{include/header_info.tex}
+\begin{document}
+%\useblockstyle{Eucall}
+% Title block with title, author, logo, etc.
+\maketitle
+\input{include/block_simex.tex}%
+%
+\begin{columns}%
+  \column{0.5}%
+  \input{include/block_spi.tex}%
+  \column{0.5}%
+  \input{include/block_heddiff.tex}%
+  \input{include/block_wdmxafs.tex}%
+\end{columns}%
+%
+%%%%%%%%%%%%% FOOTER %%%%%%%%%%%%%%%%%%%%%
+\input{include/footer.tex}%
+%
+\end{document}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% End of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
