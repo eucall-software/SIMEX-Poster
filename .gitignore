@@ -1,0 +1,8 @@
+tikzposter-template.tex
+.*.*.swp
+.*.swp
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.pdf
