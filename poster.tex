@@ -11,53 +11,176 @@
 
 
  % Title, Author, Institute
- \title{\hspace*{0.2\textwidth}\parbox{0.7\textwidth}{\centering\bf Simulation of Experiments for
- European Advanced Laser Light Sources}}
- \author{\hspace*{0.2\textwidth}{\parbox{0.7\textwidth}{\centering%
+ \title{\hspace*{0.2\textwidth}\parbox{0.7\textwidth}{\centering\bf Simulation
+ of Experiments in the European Cluster of Advanced Laser Light Sources}}
+ \author{\hspace*{0.2\textwidth}{\parbox{0.7\textwidth}{\centering\normalsize%
  C. Fortmann-Grote$^\text{1}$,
  A. Andreev$^\text{2}$,
- S. Aogaki$^\text{3}$,
- R. Briggs$^\text{4}$,
- M. Bussmann$^\text{5}$,
- M. Garten$^\text{5}$,
- M. Glass$^\text{4}$,
- A. Grund$^\text{5}$,
- A. H\"ubl$^\text{5}$,
- Y. Kemp$^\text{6}$,
- T. Kluge$^\text{5}$,\\
- A. P. Mancuso$^\text{1}$,
- S. Pascarelli$^\text{4}$,
- M. S\'anchez del R\'io$^\text{4}$,
- F. Schl\"unzen$^\text{6}$,\\
- S. Sternberger$^\text{6}$,
- R. Torchio$^\text{4}$,
- T. Vinci$^\text{7}$,
- J. Vorberger$^\text{5}$,
- R. Widera$^\text{5}$
+ A. Ashutosh$^\text{2}$
+ R. Briggs$^\text{3}$,
+ M. Bussmann$^\text{4}$,
+ A. Buzmakov$^\text{5}$
+ M. Garten$^\text{4}$,
+ A. Grund$^\text{4}$,
+ A. H\"ubl$^\text{4}$,
+ Z. Jurek$^\text{6}$,
+ N. D. Loh$^\text{7}$,
+ S. Pascarelli$^\text{3}$,
+ L. Samoylova$^\text{1}$,
+ R. Santra$^\text{6}$,
+ E. A. Schneidmiller$^\text{8}$,
+ T. Tschentscher$^\text{1}$,
+ S. Yakubov$^\text{8}$,
+ C. H. Yoon$^\text{9}$,
+ M. Yurkov$^\text{8}$,
+ B. Ziaja$^\text{6}$,
+ and A. P. Mancuso$^\text{1}$
  }}}
  \institute{\hspace*{0.2\textwidth}{\parbox{0.7\textwidth}{\centering\small%
  $^\text{1}$European XFEL, Hamburg, Germany,
  $^\text{2}$ELI-ALPS, Szeged, Hungary,
- $^\text{3}$ELI-NP, Bucharest, Romania,
- $^\text{4}$ESRF, Grenoble, France,
- $^\text{5}$HZDR, Dresden, Germany,\\
- $^\text{6}$DESY, Hamburg, Germany,
- $^\text{7}$LULI, Paris, France
+ $^\text{3}$ESRF, Grenoble, France,
+ $^\text{4}$HZDR, Dresden, Germany,
+ $^\text{5}$FSRC ``Crystallography and Photonics''  Russian Academy of Sciences, Moscow, Russia
+ $^\text{6}$CFEL, Hamburg, Germany
+ $^\text{7}$National University of Singapore, Singapore
+ $^\text{8}$DESY, Hamburg, Germany,
+ $^\text{9}$LCLS, Menlo Park, USA,
  }}}
 
  %Choose Layout
 \usetheme{Eucall}
 
+%Reference counter
+\newcounter{refcounter}
+\setcounter{refcounter}{1}
+
+\newcommand{\getCounter}[1]{\arabic{#1}\stepcounter{#1}}
 \begin{document}
+%\begin{minipage}{.9\colwidth}%
+  %\mbox{}%
+  %\begin{minipage}[][.1\textheight][t]{.475\textwidth}%
+    %\innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
+    %bodyoffsetx=10pt]
 
 % Title block with title, author, logo, etc.
 \maketitle
-%%%
+%%%%%%%%%%%%%%% TOP ROW %%%%%%%%%%%%%%%%
+\useblockstyle{Eucall}
+\block[]{SIMEX: A generic simulation platform for photon science experiments
+  [\getCounter{refcounter},\getCounter{refcounter}]}{%
+  \begin{minipage}{.9\textwidth}%
+    \mbox{}%
+    \begin{minipage}[][][t]{.38\textwidth}
+      \innerblock[titleleft]{Start--to--end simulations}{%
+        \begin{center}%
+          \includegraphics[width=0.9\textwidth,angle=0,clip]{simS2E_workflow}%
+        \end{center}%
+      }
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[][][t]{.285\textwidth}
+      \innerblock[titleleft]{Data flow in SIMEX}{%
+        \begin{center}%
+          \includegraphics[width=0.9\textwidth,angle=0,clip]{figures/simex_workflow_slide-crop}%
+        \end{center}%
+      }
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[][][t]{.205\textwidth}
+      \innerblock[titleleft]{Python scripting}{%
+        \begin{center}%
+          \includegraphics[width=0.9\textwidth,angle=0,clip]{figures/simex_script}%
+        \end{center}%
+      }
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[][][t]{.1\textwidth}
+      \innerblock[titleleft]{Standardized data format}{%
+        \begin{center}%
+          \includegraphics[width=0.42\textwidth,angle=0,clip]{figures/opmd_screenshot}\\
+          {\small www.openpmd.org}
+        \end{center}%
+      }
+    \end{minipage}%
+  \end{minipage}
+}
 \begin{columns}
 %%%%%%%%%%%%%%% FIRST column
 \column{0.5}%
 %%%
-\block[bodyoffsetx=-20pt]{X-ray diffraction in solid density plasmas}{%
+\block[bodyoffsetx=20pt]{Single particle imaging of biomolecules
+  [1,\getCounter{refcounter}]}{%
+    \innerblock[titleleft]{Studying diffraction data quality as a function of x--ray pulse
+        duration}
+    {%
+    \begin{minipage}[ ]{.9\colwidth}
+      \mbox{}%
+      \begin{minipage}[][][t]{.39\textwidth}
+      \includegraphics[width=\textwidth,angle=0,clip]{single_particle_imaging_scheme_shaded_bg+2nip.png}\\
+      {\small Sample molecule 2NIP}
+    \end{minipage}
+      \hfill%
+      \begin{minipage}[][][t]{.59\textwidth}
+        \sloppy
+        \begin{itemize}
+          \item XFEL source simulation: FAST code, XPD database xpd.xfel.eu
+          \item X--ray pulse propagation: WPG/SRW [\getCounter{refcounter}]
+          \item Sampling source fluctuations, sample orientation, and ionization
+            dynamics $\Rightarrow$ 200000 simulated patterns
+          \item Compare pulses of 3, 9, and 30 fs duration.
+        \end{itemize}
+    \end{minipage}
+    \end{minipage}
+    }%
+    \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]
+    {Photon--matter interaction: XMDYN$\,$\&$\,$XATOM [\getCounter{refcounter}]}
+    {%
+      \begin{minipage}[ ]{.9\colwidth}
+          \begin{center}
+            \includegraphics[width=.32\textwidth,angle=0,clip]{pmi_3fs}%
+            \includegraphics[width=.32\textwidth,angle=0,clip]{pmi_9fs}%
+            \includegraphics[width=.32\textwidth,angle=0,clip]{pmi_30fs}\\
+          \end{center}
+      \end{minipage}
+    }%
+    \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]
+    {Reconstructed 3D diffraction volumes and coefficient of variation}
+    {%
+      \vspace*{2ex}
+      \begin{minipage}[ ]{.9\colwidth}
+          \begin{center}
+            \mbox{}%
+            \begin{minipage}[][][t]{.53\textwidth}
+            \includegraphics[width=.99\textwidth,angle=0,clip]{scattering_vs_pulseduration-crop}\\
+              {\small Photon counts and scattering efficiency vs.
+            pulse duration }
+            \end{minipage}
+            \begin{minipage}[][][t]{.43\textwidth}
+              \includegraphics[width=.9\textwidth,angle=0,clip]{figures/diffr_orient_flow}
+            \end{minipage}
+            {\small%
+            \begin{equation*}
+               \sigma_\text{v}(q) = \frac{1}{M_q}\sum_{\mathbf{q}: |\mathbf{q}|=q} \frac{ \sqrt{\frac{1}{N} \sum_{i=1}^N \left( I_i(\mathbf{q}) - \langle I(\mathbf{q})\rangle_N \right)^2 } } { \langle I(\mathbf{q})\rangle_N }
+               \label{eqn:coeff_variation}
+             \end{equation*}
+           }
+           \hspace*{.05\textwidth}
+             \includegraphics[width=.4\textwidth,angle=0,clip]{varcoeff_3-9-30-crop}%
+            \hfill
+            \includegraphics[width=.4\textwidth,angle=0,clip]{varcoeff_3scaled-9-crop}%
+           \hspace*{.05\textwidth}
+          \end{center}
+        \end{minipage}\\[1ex]
+    \textbf{Ultra--short 3 fs pulses do not contain enough photons to produce
+      reliable diffraction data despite negligible radiation damage}
+    }%
+}
+\column{0.5}
+\useblockstyle{Eucall}
+%%%%%%%%%%%%% HPL %%%%%%%%%%%%%
+\block[bodyoffsetx=-20pt]{X-ray diffraction in solid density plasmas
+  [\getCounter{refcounter}]}{%
     \innerblock[titleleft, titleoffsetx=10pt,bodyoffsetx=10pt]
     {Identifying plasma instabilities by small angle x-ray scattering}
     {%
@@ -67,9 +190,9 @@
       \includegraphics[width=.5\textwidth,angle=0,clip]{bussmann_saxs_instabilities.pdf}%
     \end{minipage}
     }%
-    \vspace*{1ex}
     \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]
-    { Outlook: Combine PIC simulations [1] with population kinetics [2]}
+    { Outlook: Combine PIC simulations [\getCounter{refcounter}] with population
+    kinetics [\getCounter{refcounter}]}
     {%
       \begin{minipage}[ ]{.9\colwidth}
         \mbox{}%
@@ -91,152 +214,22 @@
       \end{minipage}
     }%
 }%
-\column{0.5}
-\useblockstyle{EucallRight}
 %%%
 % ESRF WDM Diagnostics
-\block[bodyoffsetx=-10pt]{X-ray diagnostics of warm dense matter [3]}{%
-  \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{X-ray absorption spectroscopy in laser shock compressed iron}{
+\block[bodyoffsetx=-10pt]{X-ray diagnostics of warm dense matter}{%
+  \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{X-ray absorption
+    spectroscopy in laser shock compressed iron [\getCounter{refcounter}]}{
   \begin{center}
     \includegraphics[width=0.45\colwidth,angle=0,clip, bb=0 0 700 470]{esrf_Fe_targets_eos}%
-    \includegraphics[width=0.45\colwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}\\
+    \includegraphics[width=0.45\colwidth,angle=0,clip]{esrf_Fe_sandwich_hydrosim}\\[2.8ex]
     \includegraphics[width=0.88\colwidth,height=0.333\colwidth,angle=0,clip]{esrf_Fe_xas_position}
   \end{center}
   }
 }
 \end{columns}
-\begin{columns}
-  \column{0.2}
-  \useblockstyle{EucallLeft}
-  % ESRF beam propagation
-\block[bodyoffsetx=-15pt,titleoffsetx=-10pt]{Synchrotron simulations}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {X-ray optics}
-    {%
-    \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_toolchain}
-      \scriptsize\sf
-      Propagation of synchrotron radiation and secondary particles to the sample interaction point.
-    \end{center}
-    }%
-    \vspace*{1ex}
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {XPD \& shadowgraphy}{%
-    \begin{center}
-      \includegraphics[width=.9\textwidth,angle=0,clip]{esrf_xpd_shadowgraphy}
-    \end{center}
-    }%
-\end{minipage}
-}
-\column{0.6}
-\useblockstyle{EucallCenter}
-\block[bodyoffsetx=0pt]{We are building a photon science simulation platform [4].}{%
-\begin{center}
-  \includegraphics[height=0.19\textheight, width=0.95\colwidth,angle=0,clip]{simS2E_workflow}
-\end{center}
-}
-
-\column{0.2}
-  \useblockstyle{EucallRight}
-% DESY HPC
-\block[bodyoffsetx=-5pt]{DESY HPC infrastructure}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Current status}
-    {%
-      \begin{center}
-      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_status}%
-      \end{center}
-    }%
-    \vspace*{1ex}
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Future development} {%
-    \begin{center}
-      \includegraphics[width=.925\textwidth,angle=0,clip]{desy_hpc_future}%
-    \end{center}
-    }%
-\end{minipage}
-}
-\end{columns}
-\begin{columns}
-
-%%%%%%%%%%%%%%% SECOND column
-\column{0.5}
-  \useblockstyle{EucallLeft}
-% ELI-ALPS
-\block{Radiation transport in complex targets [5]}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Laser-plasma acceleration in carbon cones}
-    {%
-    \begin{center}
-      %\vspace*{}
-      \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_e-ion_laser_acceleration.png}\\
-      \scriptsize\sf
-      Evolution of electron (blue) and ion (red)
-      density distribution. Laser intensity $= 10^{20} \text{W/cm}^2$,  max. proton energy  $= 40\,\text{MeV}$.\\
-      %\vspace*{1.00ex}
-      {}
-    \end{center}
-    }%
-  \end{minipage}
-  \hfill%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Electron transport in carbon nanowires} {%
-    \vspace*{8pt}
-    \begin{center}
-    \includegraphics[width=0.95\textwidth,angle=0,clip]{eli-alps_wire_targets}
-    \end{center}
-    \vspace*{8pt}
-    }%
-  \end{minipage}
-\end{minipage}
-}
-% ELI-NP
-\column{0.5}
-\useblockstyle{EucallRight}
-\block{Secondary particle generation for nuclear physics}{%
-\begin{minipage}{.9\colwidth}%
-  \mbox{}%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {ELI-NP facility and beamlines}
-    {%
-      \vspace*{1.65ex}
-      \begin{center}
-      \includegraphics[width=.925\textwidth,angle=0,clip]{eli-np_model.png}%
-      \end{center}
-      \vspace*{1.65ex}
-    }%
-  \end{minipage}
-  \hfill%
-  \begin{minipage}[][.1\textheight][t]{.475\textwidth}%
-    \innerblock[titlewidth=\textwidth,bodywidth=\textwidth,titleleft, titleoffsetx=10pt,
-    bodyoffsetx=10pt]
-    {Secondary particles tracking [6]} {%
-    \begin{center}
-      \includegraphics[width=.925\textwidth,angle=0,clip]{eli-np_sim_00080}
-    \end{center}
-    }%
-  \end{minipage}
-\end{minipage}
-}
-\end{columns}
+%%%%%%%%%%%%% FOOTER %%%%%%%%%%%%%%%%%%%%%
 \block{}{%
-\vspace*{2ex}
+\vspace*{-4ex}
 \begin{tikzpicture}%
   \draw (0,0) -- ( \textwidth - 4.5cm, 0);
 \end{tikzpicture}\\[1ex]
@@ -268,15 +261,18 @@
 \hspace*{10pt}%
 \begin{minipage}[][][t]{0.34\textwidth}
   \small
-  \underline{References}
-  %\setlength{\baselineskip}{6pt}
+  %\setlength{\baselineskip}{2pt}
   \begin{enumerate}
-    \item Burau et al. IEEE Trans. Plasma Sc. \textbf{38} (2010); http://picongpu.hzdr.de .
+    \item Yoon et al. Sci. Reports \textbf{6} (2016).
+    \item Fortmann-Grote et al. J. Phys. Conf. Series (accepted),
+      arXiv:1610.05980.
+    \item Fortmann-Grote et al. (submitted).
+    \item Samoylova et al. J. Appl Cryst. \textbf{49} (2016).
+    \item Jurek et al.  J. Appl Cryst. \textbf{49} (2016).
+    \item Kluge et al. Phys. Plasma \textbf{23} (2016).
+    \item Burau et al. IEEE Trans. Plasma Sc. \textbf{38} (2010); http://picongpu.hzdr.de.
     \item Chung et al, HEDP \textbf{1} (2005).
-    \item Torchio et al., submitted.
-    \item Yoon et al., submitted.
-    \item Andreev et al., Phys. Plasmas \textbf{22} (2015); Lecz et al. PRE \textbf{93} (2016).
-    \item Pentia et al. Nucl. Instr. Meth. Phys. Res. A \textbf{795} (2015).
+    \item Torchio et al., Sci. Reports \textbf{6} (2016).
   \end{enumerate}
 \end{minipage}
 }
