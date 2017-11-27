@@ -137,6 +137,7 @@ imap IPDB ###############################################import ipdbipdb.set
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set backspace=indent,eol,start
+set errorfile=BioAtXFELs_2017.log
 set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
 set grepprg=grep\ -nH\ $*
@@ -153,9 +154,9 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set tabstop=4
 set termencoding=utf-8
-set textwidth=80
+set textwidth=120
 set window=72
-set wrapmargin=3
+set wrapmargin=2
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -169,13 +170,15 @@ badd +0 latexmkrc
 badd +135 poster.tex
 badd +0 include/header_info.tex
 badd +0 include/block_simex.tex
-badd +0 include/block_spi.tex
+badd +51 include/block_spi.tex
 badd +1 include/block_heddiff.tex
 badd +0 include/block_wdmxafs.tex
 badd +0 include/footer.tex
 badd +29 BioAtXFELs_2017.tex
 badd +1 BioAtXFELs_2017.fdb_latexmk
 badd +0 include/block_hydratedProteins.tex
+badd +0 ~/dotfiles/vim/ftplugin/tex/texrc
+badd +927 BioAtXFELs_2017.log
 argglobal
 silent! argdel *
 argadd SIMEX.tex
@@ -190,8 +193,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 35 + 36) / 73)
-exe '2resize ' . ((&lines * 35 + 36) / 73)
+exe '1resize ' . ((&lines * 12 + 36) / 73)
+exe '2resize ' . ((&lines * 58 + 36) / 73)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -302,15 +305,15 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
-let s:l = 8 - ((7 * winheight(0) + 17) / 35)
+let s:l = 7 - ((3 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
-normal! 08|
+7
+normal! 039|
 wincmd w
 argglobal
-edit BioAtXFELs_2017.tex
+edit include/block_spi.tex
 let s:cpo_save=&cpo
 set cpo&vim
 imap <buffer> <silent> <F9> <Plug>Tex_Completion
@@ -390,20 +393,20 @@ setlocal foldignore=#
 setlocal foldlevel=0
 setlocal foldmarker={{{,}}}
 set foldmethod=syntax
-setlocal foldmethod=manual
+setlocal foldmethod=syntax
 setlocal foldminlines=1
 setlocal foldnestmax=20
-setlocal foldtext=TexFoldTextFunction()
+setlocal foldtext=foldtext()
 setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=0
-setlocal imsearch=2
+setlocal imsearch=0
 setlocal include=\\\\input\\|\\\\include{
 setlocal includeexpr=substitute(v:fname,\ '^.\\{-}{\\|}.*',\ '',\ 'g')
 setlocal indentexpr=GetTeXIndent()
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,},],=^s*^s*^s*^s*^s*^s*^s*\\bibitem,=\\item
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,},],=^s*^s*^s*\\bibitem,=\\item,},],=^s*^s*^s*^s*^s*^s*^s*^s*^s*^s*\\bibitem,=\\item
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -447,6 +450,144 @@ endif
 setlocal tabstop=4
 setlocal tagcase=
 setlocal tags=~/Docs/Publications/Poster/working/SIMEX_Poster/.git/tex.tags,~/Docs/Publications/Poster/working/SIMEX_Poster/.git/tags,./tags,./TAGS,tags,TAGS
+setlocal textwidth=120
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=2
+let s:l = 15 - ((14 * winheight(0) + 29) / 58)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+15
+normal! 07|
+wincmd w
+2wincmd w
+exe '1resize ' . ((&lines * 12 + 36) / 73)
+exe '2resize ' . ((&lines * 58 + 36) / 73)
+tabedit ~/dotfiles/vim/ftplugin/tex/texrc
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
+nnoremap <buffer> <silent> [] m':call search('^\s*endf*\%[unction]\>', "bW")
+vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
+nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
+vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")
+nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
+vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
+nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
+setlocal commentstring=\"\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'vim'
+setlocal filetype=vim
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+set foldmethod=syntax
+setlocal foldmethod=marker
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=GetVimIndent()
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,#
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'vim'
+setlocal syntax=vim
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tags=~/dotfiles/.git/vim.tags,~/dotfiles/.git/tags,./tags,./TAGS,tags,TAGS
 setlocal textwidth=80
 setlocal thesaurus=
 setlocal noundofile
@@ -455,19 +596,18 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
-silent! normal! zE
-1,21fold
-1
+79
 normal! zo
-let s:l = 24 - ((11 * winheight(0) + 17) / 35)
+100
+normal! zo
+207
+normal! zo
+let s:l = 220 - ((130 * winheight(0) + 36) / 72)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-24
-normal! 044|
-wincmd w
-exe '1resize ' . ((&lines * 35 + 36) / 73)
-exe '2resize ' . ((&lines * 35 + 36) / 73)
+220
+normal! 019|
 tabedit include/block_simex.tex
 set splitbelow splitright
 set nosplitbelow
@@ -619,12 +759,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
-let s:l = 24 - ((23 * winheight(0) + 36) / 72)
+let s:l = 33 - ((32 * winheight(0) + 36) / 72)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-24
-normal! 031|
+33
+normal! 052|
 tabedit include/block_spi.tex
 set splitbelow splitright
 set nosplitbelow
@@ -768,20 +908,20 @@ endif
 setlocal tabstop=4
 setlocal tagcase=
 setlocal tags=~/Docs/Publications/Poster/working/SIMEX_Poster/.git/tex.tags,~/Docs/Publications/Poster/working/SIMEX_Poster/.git/tags,./tags,./TAGS,tags,TAGS
-setlocal textwidth=80
+setlocal textwidth=120
 setlocal thesaurus=
 setlocal noundofile
 setlocal undolevels=-123456
 setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
-setlocal wrapmargin=3
-let s:l = 17 - ((16 * winheight(0) + 36) / 72)
+setlocal wrapmargin=2
+let s:l = 7 - ((6 * winheight(0) + 36) / 72)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 063|
+7
+normal! 011|
 tabedit include/block_hydratedProteins.tex
 set splitbelow splitright
 set nosplitbelow
@@ -1250,12 +1390,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
 silent! normal! zE
-let s:l = 28 - ((27 * winheight(0) + 36) / 72)
+let s:l = 4 - ((3 * winheight(0) + 36) / 72)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-28
-normal! 068|
+4
+normal! 0
 tabnext 1
 set stal=1
 if exists('s:wipebuf')
