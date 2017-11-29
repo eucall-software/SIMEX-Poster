@@ -5,4 +5,4 @@ $pdf_previewer="evince %O %S";
 # Cleanup settings.
 $cleanup_includes_generated = 1;
 $cleanup_includes_cusdep_generated = 1;
-$clean_full_ext .= " %R-blx.bib bbl %R.run.xml";
+$clean_full_ext .= " %R-blx.bib bbl %R.run.xml %R.aux.blg %R.synctex.gz";

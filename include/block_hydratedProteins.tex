@@ -1,10 +1,56 @@
-\block[bodyoffsetx=0pt]{Hydration shell effects on SPI signal}{%
-    \innerblock[titleleft, titleoffsetx=10pt,bodyoffsetx=10pt]{Molecular Dynamics simulations}%
+\block[bodyoffsetx=0pt]{Hydration shell effects on SPI
+  signal\cite{Fortmann-Grote2017b}}{%
+    \innerblock[titleleft]{Diffraction simulations: Varying the hydration layer thickness}%
+    {%
+    \begin{minipage}[ ]{.9\colwidth}
+        \hspace*{.1225\textwidth}%
+        \SI{1.0}{\angstrom}%
+        \hfill \SI{3.0}{\angstrom}%
+        \hfill \SI{6.0}{\angstrom}%
+        \hfill \SI{10.0}{\angstrom}%
+        \hspace*{0.1\textwidth}%
+        {\ \ \ \ }
+      \begin{center}
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_layer1}%
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_layer3}%
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_layer6}%
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_layer10}%
+        \\%
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_1diffr_layer1-crop}%
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_1diffr_layer3-crop}%
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_1diffr_layer6-crop}%
+        \includegraphics[width=.245\textwidth,angle=0,clip]{2nip_1diffr_layer10-crop}%
+      \end{center}
+    \end{minipage}
+    }%
+    %\\%
+    \innerblock[titleleft]{Tolerable solvent layer thickness for high resolution
+    imaging}
+    {%
+    \begin{minipage}[ ]{.9\colwidth}
+      \begin{center}
+        \includegraphics[width=.495\textwidth,angle=0,clip]{ai_trace_vs_layer_thickness}%
+        \includegraphics[width=.499\textwidth,angle=0,clip]{r_factor_vs_layer_thickness}%
+      \end{center}
+    \end{minipage}
+    }%
+    %\\%
+    \innerblock[titleleft]{Molecular Dynamics simulations}%
     {%
     \begin{minipage}[ ]{.9\colwidth}
       \begin{center}
         \includegraphics[width=.4\textwidth,angle=0,clip]{2nip_in_H2O_mdbox}%
         \includegraphics[width=.59\textwidth,angle=0,clip]{md_pdf}%
+      \end{center}
+    \end{minipage}
+    }%
+    %\\%
+    \innerblock[titleleft]{Sanity check: Water ring}
+    {%
+    \begin{minipage}[ ]{.9\colwidth}
+      \begin{center}
+        \includegraphics[width=.495\textwidth,angle=0,clip]{sphere100_h2o_pattern_24keV}%
+        \includegraphics[width=.499\textwidth,angle=0,clip]{sphere100_h2o_singFEL_vs_Huang2011}%
       \end{center}
     \end{minipage}
     }%

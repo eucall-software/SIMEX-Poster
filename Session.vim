@@ -2,75 +2,75 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <silent> <Plug>Tex_Completion :call Tex_Complete("default","text")
-imap <silent> <Plug> <Nop>
-inoremap <silent> <Plug>Tex_LeftRight =Tex_LeftRight()
-inoremap <silent> <Plug>Tex_MathCal =Tex_MathCal()
-inoremap <silent> <Plug>Tex_MathBF =Tex_MathBF()
-inoremap <silent> <Plug>Tex_FastCommandChange :call Tex_ChangeCommand('no')
-inoremap <silent> <Plug>Tex_FastCommandInsert =Tex_DoCommand('no')
-inoremap <silent> <Plug>Tex_FastEnvironmentChange :call Tex_ChangeEnvironments()
-inoremap <silent> <Plug>Tex_FastEnvironmentInsert =Tex_FastEnvironmentInsert("no")
 imap <F1> <Plug>Tex_Help
+inoremap <silent> <Plug>Tex_FastEnvironmentInsert =Tex_FastEnvironmentInsert("no")
+inoremap <silent> <Plug>Tex_FastEnvironmentChange :call Tex_ChangeEnvironments()
+inoremap <silent> <Plug>Tex_FastCommandInsert =Tex_DoCommand('no')
+inoremap <silent> <Plug>Tex_FastCommandChange :call Tex_ChangeCommand('no')
+inoremap <silent> <Plug>Tex_MathBF =Tex_MathBF()
+inoremap <silent> <Plug>Tex_MathCal =Tex_MathCal()
+inoremap <silent> <Plug>Tex_LeftRight =Tex_LeftRight()
+imap <silent> <Plug> <Nop>
+inoremap <silent> <Plug>Tex_Completion :call Tex_Complete("default","text")
 map! <S-Insert> <MiddleMouse>
 imap <S-Tab> <Plug>SuperTabBackward
 inoremap <C-Tab> 	
 inoremap <silent> <Plug>IMAP_JumpBack =IMAP_Jumpfunc('b', 0)
 inoremap <silent> <Plug>IMAP_JumpForward =IMAP_Jumpfunc('', 0)
-vnoremap <silent>  :call RangeCommentLine()
 nnoremap <silent>  :call CommentLine()
+vnoremap <silent>  :call RangeCommentLine()
 onoremap <silent>  :call CommentLine()
 vmap <NL> <Plug>IMAP_JumpForward
 nmap <NL> <Plug>IMAP_JumpForward
 nnoremap <silent>  :CtrlP
 map  :NERDTreeTabsToggle
-vnoremap <silent>  :call RangeUnCommentLine()
 nnoremap <silent>  :call UnCommentLine()
+vnoremap <silent>  :call RangeUnCommentLine()
 onoremap <silent>  :call UnCommentLine()
 map 'w :Gwrite
-vnoremap , :call ExecMap(',', 'v')
-vnoremap ,pi :call VEnclose('', '', '\begin{picture}', '\end{picture}')
-vnoremap ,mp :call VEnclose('', '', '\begin{minipage}', '\end{minipage}')
-vnoremap <silent> ,lr :call VEnclose('\sbox{', '}', '\begin{lrbox}', '\end{lrbox}')
-vnoremap ,fi :call VEnclose('', '', '\begin{figure}', '\end{figure}')
-vnoremap ,pg :call VEnclose('\paragraph{', '}', '', '')
-vnoremap ,s2 :call VEnclose('\subsubsection{', '}', '', '')
-vnoremap ,ss :call VEnclose('\subsection{', '}', '', '')
-vnoremap ,se :call VEnclose('\section{', '}', '', '')
-vnoremap ,ch :call VEnclose('\chapter{', '}', '', '')
-vnoremap ,pa :call VEnclose('\part{', '}', '', '')
-vnoremap <silent> ,sl :call VEnclose('', '', '\begin{slide}', '\end{slide}')
-vnoremap <silent> ,ov :call VEnclose('', '', '\begin{overlay}', '\end{overlay}')
-vnoremap <silent> ,no :call VEnclose('', '', '\begin{note}', '\end{note}')
-vnoremap <silent> ,tb :call VEnclose('', '', '\begin{thebibliography}', '\end{thebibliography}')
-vnoremap <silent> ,ve :call VEnclose('', '', '\begin{verse}', '\end{verse}')
-vnoremap <silent> ,vm :call VEnclose('\verb|', '|', '\begin{verbatim}', '\end{verbatim}')
-vnoremap <silent> ,tp :call VEnclose('', '', '\begin{titlepage}', '\end{titlepage}')
-vnoremap ,sp :call VEnclose('\subparagraph{', '}', '', '')
-vnoremap <silent> ,qe :call VEnclose('', '', '\begin{quote}', '\end{quote}')
-vnoremap <silent> ,qn :call VEnclose('', '', '\begin{quotation}', '\end{quotation}')
-vnoremap <silent> ,fr :call VEnclose('{\raggedright ', '}', '\begin{flushright}', '\end{flushright}')
-vnoremap <silent> ,fl :call VEnclose('', '', '\begin{flushleft}', '\end{flushleft}')
-vnoremap <silent> ,fc :call VEnclose('', '', '\begin{filecontents}', '\end{filecontents}')
-vnoremap <silent> ,do :call VEnclose('', '', '\begin{document}', '\end{document}')
-vnoremap <silent> ,ce :call VEnclose('\centerline{', '}', '\begin{center}', '\end{center}')
-vnoremap <silent> ,ap :call VEnclose('', '', '\begin{appendix}', '\end{appendix}')
-vnoremap <silent> ,ab :call VEnclose('', '', '\begin{abstract}', '\end{abstract}')
-vnoremap <silent> ,ma :call VEnclose('', '', '\begin{math}', '\end{math}')
-vnoremap <silent> ,eq :call VEnclose('', '', '\begin{equation}', '\end{equation}')
-vnoremap <silent> ,ea :call VEnclose('', '', '\begin{eqnarray}', '\end{eqnarray}')
-vnoremap <silent> ,dm :call VEnclose('', '', '\begin{displaymath}', '\end{displaymath}')
-vnoremap ,ar :call VEnclose('', '', '\begin{array}', '\end{array}')
-vnoremap <silent> ,al :call VEnclose('', '', '\begin{align}', '\end{align}')
-vnoremap ,tr :call VEnclose('', '', '\begin{tabular}', '\end{tabular}')
-vnoremap <silent> ,tg :call VEnclose('', '', '\begin{tabbing}', '\end{tabbing}')
-vnoremap ,te :call VEnclose('', '', '\begin{table}', '\end{table}')
-vnoremap <silent> ,tl :call VEnclose('', '', '\begin{trivlist}', '\end{trivlist}')
-vnoremap <silent> ,ti :call VEnclose('', '', '\begin{theindex}', '\end{theindex}')
-vnoremap <silent> ,it :call VEnclose('', '', '\begin{itemize}', '\end{itemize}')
-vnoremap <silent> ,en :call VEnclose('', '', '\begin{enumerate}', '\end{enumerate}')
-vnoremap ,de :call VEnclose('', '', '\begin{description}', '\end{description}')
 vnoremap ,li :call VEnclose('', '', '\begin{list}', '\end{list}')
+vnoremap ,de :call VEnclose('', '', '\begin{description}', '\end{description}')
+vnoremap <silent> ,en :call VEnclose('', '', '\begin{enumerate}', '\end{enumerate}')
+vnoremap <silent> ,it :call VEnclose('', '', '\begin{itemize}', '\end{itemize}')
+vnoremap <silent> ,ti :call VEnclose('', '', '\begin{theindex}', '\end{theindex}')
+vnoremap <silent> ,tl :call VEnclose('', '', '\begin{trivlist}', '\end{trivlist}')
+vnoremap ,te :call VEnclose('', '', '\begin{table}', '\end{table}')
+vnoremap <silent> ,tg :call VEnclose('', '', '\begin{tabbing}', '\end{tabbing}')
+vnoremap ,tr :call VEnclose('', '', '\begin{tabular}', '\end{tabular}')
+vnoremap <silent> ,al :call VEnclose('', '', '\begin{align}', '\end{align}')
+vnoremap ,ar :call VEnclose('', '', '\begin{array}', '\end{array}')
+vnoremap <silent> ,dm :call VEnclose('', '', '\begin{displaymath}', '\end{displaymath}')
+vnoremap <silent> ,ea :call VEnclose('', '', '\begin{eqnarray}', '\end{eqnarray}')
+vnoremap <silent> ,eq :call VEnclose('', '', '\begin{equation}', '\end{equation}')
+vnoremap <silent> ,ma :call VEnclose('', '', '\begin{math}', '\end{math}')
+vnoremap <silent> ,ab :call VEnclose('', '', '\begin{abstract}', '\end{abstract}')
+vnoremap <silent> ,ap :call VEnclose('', '', '\begin{appendix}', '\end{appendix}')
+vnoremap <silent> ,ce :call VEnclose('\centerline{', '}', '\begin{center}', '\end{center}')
+vnoremap <silent> ,do :call VEnclose('', '', '\begin{document}', '\end{document}')
+vnoremap <silent> ,fc :call VEnclose('', '', '\begin{filecontents}', '\end{filecontents}')
+vnoremap <silent> ,fl :call VEnclose('', '', '\begin{flushleft}', '\end{flushleft}')
+vnoremap <silent> ,fr :call VEnclose('{\raggedright ', '}', '\begin{flushright}', '\end{flushright}')
+vnoremap <silent> ,qn :call VEnclose('', '', '\begin{quotation}', '\end{quotation}')
+vnoremap <silent> ,qe :call VEnclose('', '', '\begin{quote}', '\end{quote}')
+vnoremap ,sp :call VEnclose('\subparagraph{', '}', '', '')
+vnoremap <silent> ,tp :call VEnclose('', '', '\begin{titlepage}', '\end{titlepage}')
+vnoremap <silent> ,vm :call VEnclose('\verb|', '|', '\begin{verbatim}', '\end{verbatim}')
+vnoremap <silent> ,ve :call VEnclose('', '', '\begin{verse}', '\end{verse}')
+vnoremap <silent> ,tb :call VEnclose('', '', '\begin{thebibliography}', '\end{thebibliography}')
+vnoremap <silent> ,no :call VEnclose('', '', '\begin{note}', '\end{note}')
+vnoremap <silent> ,ov :call VEnclose('', '', '\begin{overlay}', '\end{overlay}')
+vnoremap <silent> ,sl :call VEnclose('', '', '\begin{slide}', '\end{slide}')
+vnoremap ,pa :call VEnclose('\part{', '}', '', '')
+vnoremap ,ch :call VEnclose('\chapter{', '}', '', '')
+vnoremap ,se :call VEnclose('\section{', '}', '', '')
+vnoremap ,ss :call VEnclose('\subsection{', '}', '', '')
+vnoremap ,s2 :call VEnclose('\subsubsection{', '}', '', '')
+vnoremap ,pg :call VEnclose('\paragraph{', '}', '', '')
+vnoremap ,fi :call VEnclose('', '', '\begin{figure}', '\end{figure}')
+vnoremap <silent> ,lr :call VEnclose('\sbox{', '}', '\begin{lrbox}', '\end{lrbox}')
+vnoremap ,mp :call VEnclose('', '', '\begin{minipage}', '\end{minipage}')
+vnoremap ,pi :call VEnclose('', '', '\begin{picture}', '\end{picture}')
+vnoremap , :call ExecMap(',', 'v')
 nmap <silent> \w\y <Plug>VimwikiMakeYesterdayDiaryNote
 nmap <silent> \w\t <Plug>VimwikiTabMakeDiaryNote
 nmap <silent> \w\w <Plug>VimwikiMakeDiaryNote
@@ -91,36 +91,36 @@ nnoremap \sn :NamedSessionMakeCwd
 nnoremap \sS :GSessionMake
 nnoremap \ss :GSessionMakeLocal
 nnoremap \s :%s/\<\>//g<Left><Left>
-vnoremap ` :call ExecMap('`', 'v')
-vnoremap <silent> `em :call VEnclose('\emph{', '}', '{\em', '\/}')
-vnoremap <silent> `it :call VEnclose('\textit{', '}', '{\itshape ', '}')
-vnoremap <silent> `sc :call VEnclose('\textsc{', '}', '{\scshape ', '}')
-vnoremap <silent> `sl :call VEnclose('\textsl{', '}', '{\slshape ', '}')
-vnoremap <silent> `up :call VEnclose('\textup{', '}', '{\upshape ', '}')
-vnoremap <silent> `rm :call VEnclose('\textrm{', '}', '{\rmfamily ', '}')
-vnoremap <silent> `sf :call VEnclose('\textsf{', '}', '{\sffamily ', '}')
-vnoremap <silent> `tt :call VEnclose('\texttt{', '}', '{\ttfamily ', '}')
-vnoremap <silent> `md :call VEnclose('\textmd{', '}', '{\mdseries ', '}')
-vnoremap <silent> `bf :call VEnclose('\textbf{', '}', '{\bfseries ', '}')
-vnoremap <silent> `$ :call VEnclose('$', '$', '\[', '\]')
-vnoremap <silent> `{ :call VEnclose('\left\{ ', ' \right\}', '\left\{', '\right\}')
-vnoremap <silent> `[ :call VEnclose('\left[ ', ' \right]', '\left[', '\right]')
 vnoremap <silent> `( :call VEnclose('\left( ', ' \right)', '\left(', '\right)')
+vnoremap <silent> `[ :call VEnclose('\left[ ', ' \right]', '\left[', '\right]')
+vnoremap <silent> `{ :call VEnclose('\left\{ ', ' \right\}', '\left\{', '\right\}')
+vnoremap <silent> `$ :call VEnclose('$', '$', '\[', '\]')
+vnoremap <silent> `bf :call VEnclose('\textbf{', '}', '{\bfseries ', '}')
+vnoremap <silent> `md :call VEnclose('\textmd{', '}', '{\mdseries ', '}')
+vnoremap <silent> `tt :call VEnclose('\texttt{', '}', '{\ttfamily ', '}')
+vnoremap <silent> `sf :call VEnclose('\textsf{', '}', '{\sffamily ', '}')
+vnoremap <silent> `rm :call VEnclose('\textrm{', '}', '{\rmfamily ', '}')
+vnoremap <silent> `up :call VEnclose('\textup{', '}', '{\upshape ', '}')
+vnoremap <silent> `sl :call VEnclose('\textsl{', '}', '{\slshape ', '}')
+vnoremap <silent> `sc :call VEnclose('\textsc{', '}', '{\scshape ', '}')
+vnoremap <silent> `it :call VEnclose('\textit{', '}', '{\itshape ', '}')
+vnoremap <silent> `em :call VEnclose('\emph{', '}', '{\em', '\/}')
+vnoremap ` :call ExecMap('`', 'v')
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
-map <F4> 0i%j
-nnoremap <silent> <Plug>Tex_LeftRight :call Tex_PutLeftRight()
-vnoremap <silent> <Plug>Tex_MathCal `>a}`<i\mathcal{
-vnoremap <silent> <Plug>Tex_MathBF `>a}`<i\mathbf{
-nnoremap <Plug>Tex_RefreshFolds :call MakeTexFolds(1)
-nnoremap <silent> <Plug>Tex_FastCommandChange :call Tex_ChangeCommand('no')
-vnoremap <silent> <Plug>Tex_FastCommandInsert :call Tex_DoCommand('yes')
-nnoremap <silent> <Plug>Tex_FastCommandInsert i=Tex_DoCommand('no')
-nnoremap <silent> <Plug>Tex_FastEnvironmentChange :call Tex_ChangeEnvironments()
-vnoremap <silent> <Plug>Tex_FastEnvironmentInsert :call Tex_FastEnvironmentInsert("yes")
-nnoremap <silent> <Plug>Tex_FastEnvironmentInsert i=Tex_FastEnvironmentInsert("no")
-nmap <F1> <Plug>Tex_Help
 nmap <silent> <Plug> i
+nmap <F1> <Plug>Tex_Help
+nnoremap <silent> <Plug>Tex_FastEnvironmentInsert i=Tex_FastEnvironmentInsert("no")
+vnoremap <silent> <Plug>Tex_FastEnvironmentInsert :call Tex_FastEnvironmentInsert("yes")
+nnoremap <silent> <Plug>Tex_FastEnvironmentChange :call Tex_ChangeEnvironments()
+nnoremap <silent> <Plug>Tex_FastCommandInsert i=Tex_DoCommand('no')
+vnoremap <silent> <Plug>Tex_FastCommandInsert :call Tex_DoCommand('yes')
+nnoremap <silent> <Plug>Tex_FastCommandChange :call Tex_ChangeCommand('no')
+nnoremap <Plug>Tex_RefreshFolds :call MakeTexFolds(1)
+vnoremap <silent> <Plug>Tex_MathBF `>a}`<i\mathbf{
+vnoremap <silent> <Plug>Tex_MathCal `>a}`<i\mathcal{
+nnoremap <silent> <Plug>Tex_LeftRight :call Tex_PutLeftRight()
+map <F4> 0i%j
 map <S-Insert> <MiddleMouse>
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
@@ -144,6 +144,7 @@ set grepprg=grep\ -nH\ $*
 set guicursor=a:blinkon0
 set guifont=Monospace\ 12
 set helplang=en
+set iminsert=0
 set mouse=a
 set printoptions=paper:a4
 set ruler
@@ -154,9 +155,9 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set tabstop=4
 set termencoding=utf-8
-set textwidth=120
-set window=72
-set wrapmargin=2
+set textwidth=80
+set window=45
+set wrapmargin=3
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -166,18 +167,18 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +29 SIMEX.tex
-badd +0 latexmkrc
+badd +1 latexmkrc
 badd +135 poster.tex
-badd +0 include/header_info.tex
-badd +0 include/block_simex.tex
-badd +51 include/block_spi.tex
+badd +1 include/header_info.tex
+badd +1 include/block_simex.tex
+badd +16 include/block_spi.tex
 badd +1 include/block_heddiff.tex
-badd +0 include/block_wdmxafs.tex
-badd +0 include/footer.tex
-badd +29 BioAtXFELs_2017.tex
+badd +1 include/block_wdmxafs.tex
+badd +1 include/footer.tex
+badd +1 BioAtXFELs_2017.tex
 badd +1 BioAtXFELs_2017.fdb_latexmk
-badd +0 include/block_hydratedProteins.tex
-badd +0 ~/dotfiles/vim/ftplugin/tex/texrc
+badd +1 include/block_hydratedProteins.tex
+badd +1 ~/dotfiles/vim/ftplugin/tex/texrc
 badd +927 BioAtXFELs_2017.log
 argglobal
 silent! argdel *
@@ -193,8 +194,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 12 + 36) / 73)
-exe '2resize ' . ((&lines * 58 + 36) / 73)
+exe '1resize ' . ((&lines * 2 + 23) / 46)
+exe '2resize ' . ((&lines * 41 + 23) / 46)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -305,7 +306,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
-let s:l = 7 - ((3 * winheight(0) + 6) / 12)
+let s:l = 7 - ((1 * winheight(0) + 1) / 2)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -313,7 +314,7 @@ normal! zt
 normal! 039|
 wincmd w
 argglobal
-edit include/block_spi.tex
+edit BioAtXFELs_2017.tex
 let s:cpo_save=&cpo
 set cpo&vim
 imap <buffer> <silent> <F9> <Plug>Tex_Completion
@@ -380,7 +381,7 @@ setlocal define=\\\\\\([egx]\\|char\\|mathchar\\|count\\|dimen\\|muskip\\|
 setlocal dictionary=~/dotfiles/vim/ftplugin/latex-suite/dictionaries/dictionary
 setlocal nodiff
 setlocal equalprg=
-setlocal errorformat=%*[^\"]\"%f\"%*\\D%l:\ %m,\"%f\"%*\\D%l:\ %m,%-G%f:%l:\ (Each\ undeclared\ identifier\ is\ reported\ only\ once,%-G%f:%l:\ for\ each\ function\ it\ appears\ in.),%-GIn\ file\ included\ from\ %f:%l:%c:,%-GIn\ file\ included\ from\ %f:%l:%c\\,,%-GIn\ file\ included\ from\ %f:%l:%c,%-GIn\ file\ included\ from\ %f:%l,%-G%*[\ ]from\ %f:%l:%c,%-G%*[\ ]from\ %f:%l:,%-G%*[\ ]from\ %f:%l\\,,%-G%*[\ ]from\ %f:%l,%f(%l):%m,\"%f\"\\,\ line\ %l%*\\D%c%*[^\ ]\ %m,%D%*\\a[%*\\d]:\ Entering\ directory\ %*[`']%f',%X%*\\a[%*\\d]:\ Leaving\ directory\ %*[`']%f',%D%*\\a:\ Entering\ directory\ %*[`']%f',%X%*\\a:\ Leaving\ directory\ %*[`']%f',%DMaking\ %*\\a\ in\ %f,%f|%l|\ %m,%-G%.%#Underfull%.%#,%-G%.%#Overfull%.%#,%-G%.%#specifier\ changed\ to%.%#,%-G%.%#You\ have\ requested%.%#,%-G%.%#Missing\ number%\\,\ treated\ as\ zero.%.%#,%-G%.%#A\ float\ is\ stuck\ (cannot\ be\ placed)\ on\ input\ line%.%#,%E!\ LaTeX\ %trror:\ %m,%E!\ %m,%E%f:%l:\ %m,%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,%+W%.%#\ at\ lines\ %l--%*\\d,%+WLaTeX\ %.%#Warning:\ %m,%-Cl.%l\ %m,%-Cl.%l\ ,%-C\ \ %m,%-C%.%#-%.%#,%-C%.%#[]%.%#,%-C[]%.%#,%-C%.%#%[{}\\]%.%#,%-C<%.%#>%m,%-GSee\ the\ LaTeX%m,%-GType\ \ H\ <return>%m,%-G\ ...%.%#,%-G%.%#\ (C)\ %.%#,%-G(see\ the\ transcript%.%#),%-G\\s%#,%-O(%*[^()])%r,%-P(%f%r,%-P\ %\\=(%f%r,%-P%*[^()](%f%r,%-P(%f%*[^()],%-P[%\\d%[^()]%#(%f%r,%-P%*[^()],%-Q)%r,%-Q%*[^()])%r,%-Q[%\\d%*[^()])%r,%-Q%*[^()],%-G%.%#
+setlocal errorformat=%*[^\"]\"%f\"%*\\D%l:\ %m,\"%f\"%*\\D%l:\ %m,%-G%f:%l:\ (Each\ undeclared\ identifier\ is\ reported\ only\ once,%-G%f:%l:\ for\ each\ function\ it\ appears\ in.),%-GIn\ file\ included\ from\ %f:%l:%c:,%-GIn\ file\ included\ from\ %f:%l:%c\\,,%-GIn\ file\ included\ from\ %f:%l:%c,%-GIn\ file\ included\ from\ %f:%l,%-G%*[\ ]from\ %f:%l:%c,%-G%*[\ ]from\ %f:%l:,%-G%*[\ ]from\ %f:%l\\,,%-G%*[\ ]from\ %f:%l,%f(%l):%m,\"%f\"\\,\ line\ %l%*\\D%c%*[^\ ]\ %m,%D%*\\a[%*\\d]:\ Entering\ directory\ %*[`']%f',%X%*\\a[%*\\d]:\ Leaving\ directory\ %*[`']%f',%D%*\\a:\ Entering\ directory\ %*[`']%f',%X%*\\a:\ Leaving\ directory\ %*[`']%f',%DMaking\ %*\\a\ in\ %f,%f|%l|\ %m,%-G%.%#Underfull%.%#,%-G%.%#Overfull%.%#,%-G%.%#specifier\ changed\ to%.%#,%-G%.%#You\ have\ requested%.%#,%-G%.%#Missing\ number%\\,\ treated\ as\ zero.%.%#,%-G%.%#A\ float\ is\ stuck\ (cannot\ be\ placed)\ on\ input\ line%.%#,%-G%.%#LaTeX\ Font\ Warning%.%#,%E!\ LaTeX\ %trror:\ %m,%E!\ %m,%E%f:%l:\ %m,%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,%+W%.%#\ at\ lines\ %l--%*\\d,%+WLaTeX\ %.%#Warning:\ %m,%-Cl.%l\ %m,%-Cl.%l\ ,%-C\ \ %m,%-C%.%#-%.%#,%-C%.%#[]%.%#,%-C[]%.%#,%-C%.%#%[{}\\]%.%#,%-C<%.%#>%m,%-GSee\ the\ LaTeX%m,%-GType\ \ H\ <return>%m,%-G\ ...%.%#,%-G%.%#\ (C)\ %.%#,%-G(see\ the\ transcript%.%#),%-G\\s%#,%-O(%*[^()])%r,%-P(%f%r,%-P\ %\\=(%f%r,%-P%*[^()](%f%r,%-P(%f%*[^()],%-P[%\\d%[^()]%#(%f%r,%-P%*[^()],%-Q)%r,%-Q%*[^()])%r,%-Q[%\\d%*[^()])%r,%-Q%*[^()],%-G%.%#
 setlocal expandtab
 if &filetype != 'tex'
 setlocal filetype=tex
@@ -393,20 +394,20 @@ setlocal foldignore=#
 setlocal foldlevel=0
 setlocal foldmarker={{{,}}}
 set foldmethod=syntax
-setlocal foldmethod=syntax
+setlocal foldmethod=manual
 setlocal foldminlines=1
 setlocal foldnestmax=20
-setlocal foldtext=foldtext()
+setlocal foldtext=TexFoldTextFunction()
 setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=0
-setlocal imsearch=0
+setlocal imsearch=2
 setlocal include=\\\\input\\|\\\\include{
 setlocal includeexpr=substitute(v:fname,\ '^.\\{-}{\\|}.*',\ '',\ 'g')
 setlocal indentexpr=GetTeXIndent()
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,},],=^s*^s*^s*\\bibitem,=\\item,},],=^s*^s*^s*^s*^s*^s*^s*^s*^s*^s*\\bibitem,=\\item
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,},],=^s*^s*^s*^s*^s*\\bibitem,=\\item
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -450,24 +451,27 @@ endif
 setlocal tabstop=4
 setlocal tagcase=
 setlocal tags=~/Docs/Publications/Poster/working/SIMEX_Poster/.git/tex.tags,~/Docs/Publications/Poster/working/SIMEX_Poster/.git/tags,./tags,./TAGS,tags,TAGS
-setlocal textwidth=120
+setlocal textwidth=80
 setlocal thesaurus=
 setlocal noundofile
 setlocal undolevels=-123456
 setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
-setlocal wrapmargin=2
-let s:l = 15 - ((14 * winheight(0) + 29) / 58)
+setlocal wrapmargin=3
+silent! normal! zE
+1,21fold
+1
+normal! zo
+let s:l = 1 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-15
-normal! 07|
+1
+normal! 0
 wincmd w
-2wincmd w
-exe '1resize ' . ((&lines * 12 + 36) / 73)
-exe '2resize ' . ((&lines * 58 + 36) / 73)
+exe '1resize ' . ((&lines * 2 + 23) / 46)
+exe '2resize ' . ((&lines * 41 + 23) / 46)
 tabedit ~/dotfiles/vim/ftplugin/tex/texrc
 set splitbelow splitright
 set nosplitbelow
@@ -602,7 +606,7 @@ normal! zo
 normal! zo
 207
 normal! zo
-let s:l = 220 - ((130 * winheight(0) + 36) / 72)
+let s:l = 220 - ((87 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -759,7 +763,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
-let s:l = 33 - ((32 * winheight(0) + 36) / 72)
+let s:l = 33 - ((10 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -916,7 +920,7 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=2
-let s:l = 7 - ((6 * winheight(0) + 36) / 72)
+let s:l = 7 - ((4 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -995,7 +999,7 @@ setlocal define=\\\\\\([egx]\\|char\\|mathchar\\|count\\|dimen\\|muskip\\|
 setlocal dictionary=~/dotfiles/vim/ftplugin/latex-suite/dictionaries/dictionary
 setlocal nodiff
 setlocal equalprg=
-setlocal errorformat=%*[^\"]\"%f\"%*\\D%l:\ %m,\"%f\"%*\\D%l:\ %m,%-G%f:%l:\ (Each\ undeclared\ identifier\ is\ reported\ only\ once,%-G%f:%l:\ for\ each\ function\ it\ appears\ in.),%-GIn\ file\ included\ from\ %f:%l:%c:,%-GIn\ file\ included\ from\ %f:%l:%c\\,,%-GIn\ file\ included\ from\ %f:%l:%c,%-GIn\ file\ included\ from\ %f:%l,%-G%*[\ ]from\ %f:%l:%c,%-G%*[\ ]from\ %f:%l:,%-G%*[\ ]from\ %f:%l\\,,%-G%*[\ ]from\ %f:%l,%f(%l):%m,\"%f\"\\,\ line\ %l%*\\D%c%*[^\ ]\ %m,%D%*\\a[%*\\d]:\ Entering\ directory\ %*[`']%f',%X%*\\a[%*\\d]:\ Leaving\ directory\ %*[`']%f',%D%*\\a:\ Entering\ directory\ %*[`']%f',%X%*\\a:\ Leaving\ directory\ %*[`']%f',%DMaking\ %*\\a\ in\ %f,%f|%l|\ %m,%-G%.%#Underfull%.%#,%-G%.%#Overfull%.%#,%-G%.%#specifier\ changed\ to%.%#,%-G%.%#You\ have\ requested%.%#,%-G%.%#Missing\ number%\\,\ treated\ as\ zero.%.%#,%-G%.%#A\ float\ is\ stuck\ (cannot\ be\ placed)\ on\ input\ line%.%#,%E!\ LaTeX\ %trror:\ %m,%E!\ %m,%E%f:%l:\ %m,%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,%+W%.%#\ at\ lines\ %l--%*\\d,%+WLaTeX\ %.%#Warning:\ %m,%-Cl.%l\ %m,%-Cl.%l\ ,%-C\ \ %m,%-C%.%#-%.%#,%-C%.%#[]%.%#,%-C[]%.%#,%-C%.%#%[{}\\]%.%#,%-C<%.%#>%m,%-GSee\ the\ LaTeX%m,%-GType\ \ H\ <return>%m,%-G\ ...%.%#,%-G%.%#\ (C)\ %.%#,%-G(see\ the\ transcript%.%#),%-G\\s%#,%-O(%*[^()])%r,%-P(%f%r,%-P\ %\\=(%f%r,%-P%*[^()](%f%r,%-P(%f%*[^()],%-P[%\\d%[^()]%#(%f%r,%-P%*[^()],%-Q)%r,%-Q%*[^()])%r,%-Q[%\\d%*[^()])%r,%-Q%*[^()],%-G%.%#
+setlocal errorformat=%*[^\"]\"%f\"%*\\D%l:\ %m,\"%f\"%*\\D%l:\ %m,%-G%f:%l:\ (Each\ undeclared\ identifier\ is\ reported\ only\ once,%-G%f:%l:\ for\ each\ function\ it\ appears\ in.),%-GIn\ file\ included\ from\ %f:%l:%c:,%-GIn\ file\ included\ from\ %f:%l:%c\\,,%-GIn\ file\ included\ from\ %f:%l:%c,%-GIn\ file\ included\ from\ %f:%l,%-G%*[\ ]from\ %f:%l:%c,%-G%*[\ ]from\ %f:%l:,%-G%*[\ ]from\ %f:%l\\,,%-G%*[\ ]from\ %f:%l,%f(%l):%m,\"%f\"\\,\ line\ %l%*\\D%c%*[^\ ]\ %m,%D%*\\a[%*\\d]:\ Entering\ directory\ %*[`']%f',%X%*\\a[%*\\d]:\ Leaving\ directory\ %*[`']%f',%D%*\\a:\ Entering\ directory\ %*[`']%f',%X%*\\a:\ Leaving\ directory\ %*[`']%f',%DMaking\ %*\\a\ in\ %f,%f|%l|\ %m,%-G%.%#Underfull%.%#,%-G%.%#Overfull%.%#,%-G%.%#specifier\ changed\ to%.%#,%-G%.%#You\ have\ requested%.%#,%-G%.%#Missing\ number%\\,\ treated\ as\ zero.%.%#,%-G%.%#A\ float\ is\ stuck\ (cannot\ be\ placed)\ on\ input\ line%.%#,%-G%.%#LaTeX\ Font\ Warning%.%#,%E!\ LaTeX\ %trror:\ %m,%E!\ %m,%E%f:%l:\ %m,%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,%+W%.%#\ at\ lines\ %l--%*\\d,%+WLaTeX\ %.%#Warning:\ %m,%-Cl.%l\ %m,%-Cl.%l\ ,%-C\ \ %m,%-C%.%#-%.%#,%-C%.%#[]%.%#,%-C[]%.%#,%-C%.%#%[{}\\]%.%#,%-C<%.%#>%m,%-GSee\ the\ LaTeX%m,%-GType\ \ H\ <return>%m,%-G\ ...%.%#,%-G%.%#\ (C)\ %.%#,%-G(see\ the\ transcript%.%#),%-G\\s%#,%-O(%*[^()])%r,%-P(%f%r,%-P\ %\\=(%f%r,%-P%*[^()](%f%r,%-P(%f%*[^()],%-P[%\\d%[^()]%#(%f%r,%-P%*[^()],%-Q)%r,%-Q%*[^()])%r,%-Q[%\\d%*[^()])%r,%-Q%*[^()],%-G%.%#
 setlocal expandtab
 if &filetype != 'tex'
 setlocal filetype=tex
@@ -1016,7 +1020,7 @@ setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=2
+setlocal iminsert=0
 setlocal imsearch=2
 setlocal include=\\\\input\\|\\\\include{
 setlocal includeexpr=substitute(v:fname,\ '^.\\{-}{\\|}.*',\ '',\ 'g')
@@ -1074,12 +1078,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
 silent! normal! zE
-let s:l = 35 - ((34 * winheight(0) + 36) / 72)
+let s:l = 24 - ((23 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-35
-normal! 0
+24
+normal! 086|
 tabedit include/footer.tex
 set splitbelow splitright
 set nosplitbelow
@@ -1232,7 +1236,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
 silent! normal! zE
-let s:l = 44 - ((43 * winheight(0) + 36) / 72)
+let s:l = 44 - ((14 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1390,13 +1394,13 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=3
 silent! normal! zE
-let s:l = 4 - ((3 * winheight(0) + 36) / 72)
+let s:l = 4 - ((1 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 4
 normal! 0
-tabnext 1
+tabnext 5
 set stal=1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
