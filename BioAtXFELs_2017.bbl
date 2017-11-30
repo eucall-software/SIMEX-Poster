@@ -1,0 +1,405 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global}
+    \entry{Fortmann-Grote2017a}{inproceedings}{}
+      \name{author}{24}{}{%
+        {{hash=5806dbaa510782460014e7dd1a6e19cb}{%
+           family={Fortmann-Grote},
+           family_i={F\bibinithyphendelim G\bibinitperiod},
+           given={C.},
+           given_i={C\bibinitperiod}}}%
+        {{hash=7513d3cca0bf38d3ba12174359e0f875}{%
+           family={Andreev},
+           family_i={A\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           given_i={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ceeadb2c2d15d2840174472227122561}{%
+           family={Appel},
+           family_i={A\bibinitperiod},
+           given={K.},
+           given_i={K\bibinitperiod}}}%
+        {{hash=146f4875ebe12fd128dae32d3f8fc161}{%
+           family={Branco},
+           family_i={B\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+        {{hash=de1294452cd6ad9c7556720b5d61d4b9}{%
+           family={Briggs},
+           family_i={B\bibinitperiod},
+           given={R.},
+           given_i={R\bibinitperiod}}}%
+        {{hash=52afae3755f28696e4097a0cb6927cce}{%
+           family={Bussmann},
+           family_i={B\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=bbd2a1f0407beb0aeba3c487e2fe47d4}{%
+           family={Buzmakov},
+           family_i={B\bibinitperiod},
+           given={A.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=5f28fc9213320d65ba3f15fafbe7a8f9}{%
+           family={Garten},
+           family_i={G\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=7bbfe32c5071543830fdd4c66fdaa694}{%
+           family={Grund},
+           family_i={G\bibinitperiod},
+           given={A.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=77887c5abfae5ddea8541d709bceca95}{%
+           family={Huebl},
+           family_i={H\bibinitperiod},
+           given={A.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=b1d903bf240c886b2cb39b768384d8ce}{%
+           family={Jurek},
+           family_i={J\bibinitperiod},
+           given={Z.},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=7309bff216a6f12dca6658a53b913e21}{%
+           family={Loh},
+           family_i={L\bibinitperiod},
+           given={N.\bibnamedelimi D.},
+           given_i={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=492962024d3eb1e5fed249400fd886c5}{%
+           family={Nakatsutsumi},
+           family_i={N\bibinitperiod},
+           given={M.},
+           given_i={M\bibinitperiod}}}%
+        {{hash=46173212b366d5acffc373ebb3636034}{%
+           family={Samoylova},
+           family_i={S\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=aa19a278ae5c87854f70a6a8a4ee0a63}{%
+           family={Santra},
+           family_i={S\bibinitperiod},
+           given={R.},
+           given_i={R\bibinitperiod}}}%
+        {{hash=9231d306c5bba09a4cc642b431684177}{%
+           family={Schneidmiller},
+           family_i={S\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           given_i={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d8f77efbc85f3795eff0aa9db9fba421}{%
+           family={Sharma},
+           family_i={S\bibinitperiod},
+           given={A.},
+           given_i={A\bibinitperiod}}}%
+        {{hash=da4bbf34296c1f31c7181b093d225a6b}{%
+           family={Steiniger},
+           family_i={S\bibinitperiod},
+           given={K.},
+           given_i={K\bibinitperiod}}}%
+        {{hash=6491424f80bee28b059ef6ca4cb4cb61}{%
+           family={Yakubov},
+           family_i={Y\bibinitperiod},
+           given={S.},
+           given_i={S\bibinitperiod}}}%
+        {{hash=efd8bd24be81e15c10d1d99630bb75c0}{%
+           family={Yoon},
+           family_i={Y\bibinitperiod},
+           given={C.\bibnamedelimi H.},
+           given_i={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ed92b1ae0ba32e64b96d8cbc873a1611}{%
+           family={Yurkov},
+           family_i={Y\bibinitperiod},
+           given={M.\bibnamedelimi V.},
+           given_i={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=a3181ea4181a589b718ce08352fc34f6}{%
+           family={Zastrau},
+           family_i={Z\bibinitperiod},
+           given={U.},
+           given_i={U\bibinitperiod}}}%
+        {{hash=986adf762f3d55af08d6b45c45ac330e}{%
+           family={Ziaja-Motyka},
+           family_i={Z\bibinithyphendelim M\bibinitperiod},
+           given={B.},
+           given_i={B\bibinitperiod}}}%
+        {{hash=d864ccafeb1240b69a28b7f6250b8d13}{%
+           family={Mancuso},
+           family_i={M\bibinitperiod},
+           given={A.\bibnamedelimi P.},
+           given_i={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{de1aaf757c1719b588bd984708f5a2a4}
+      \strng{fullhash}{a67dbbc34cb17bcb8b5480523d2b2058}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. SPIE}
+      \field{eventtitle}{SPIE Optics + Optoelectronics}
+      \field{journaltitle}{}
+      \field{month}{06}
+      \field{title}{Simulations of ultrafast x--ray laser experiments}
+      \field{volume}{10237}
+      \field{year}{2017}
+      \field{pages}{102370S}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1117/12.2270552
+      \endverb
+      \verb{file}
+      \verb Fortmann-Grote2017a.pdf:Fortmann-Grote2017a.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Yoon2016}{article}{}
+      \name{author}{11}{}{%
+        {{hash=8c7bb7643e7418e6b14b2ccf179ccbd9}{%
+           family={Yoon},
+           family_i={Y\bibinitperiod},
+           given={Chun\bibnamedelima Hong},
+           given_i={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f27973e95ca65e626e08736626d84c47}{%
+           family={Yurkov},
+           family_i={Y\bibinitperiod},
+           given={Mikhail\bibnamedelima V},
+           given_i={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=7ab10dccd90a3715e2d09491552d82a0}{%
+           family={Schneidmiller},
+           family_i={S\bibinitperiod},
+           given={Evgeny\bibnamedelima A},
+           given_i={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a9e0fefb770ae4b9b4b3aa235bcfab44}{%
+           family={Samoylova},
+           family_i={S\bibinitperiod},
+           given={Liubov},
+           given_i={L\bibinitperiod}}}%
+        {{hash=11e8710bef7a5378338e9201a30ec284}{%
+           family={Buzmakov},
+           family_i={B\bibinitperiod},
+           given={Alexey},
+           given_i={A\bibinitperiod}}}%
+        {{hash=4325af6f5aa392ba31bdd3f064d0cac8}{%
+           family={Jurek},
+           family_i={J\bibinitperiod},
+           given={Zoltan},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=cf36602ffe73645128220e1c765d95f6}{%
+           family={Ziaja},
+           family_i={Z\bibinitperiod},
+           given={Beata},
+           given_i={B\bibinitperiod}}}%
+        {{hash=9c1bfa242982cad829f1c2d061c0137d}{%
+           family={Santra},
+           family_i={S\bibinitperiod},
+           given={Robin},
+           given_i={R\bibinitperiod}}}%
+        {{hash=864374f3220bc09f9feed59c2bc0209b}{%
+           family={Loh},
+           family_i={L\bibinitperiod},
+           given={N\bibnamedelima Duane},
+           given_i={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b3a5b6f32f28881b822d7fc4269381d0}{%
+           family={Tschentscher},
+           family_i={T\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+        {{hash=4210cd8a6e28f296af115b6c2a7d7987}{%
+           family={Mancuso},
+           family_i={M\bibinitperiod},
+           given={Adrian\bibnamedelima P},
+           given_i={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{86e5ba88b9c6a2ac081b8634df438d1a}
+      \strng{fullhash}{df6d76bf3125479eb5de042439d632ec}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The advent of newer, brighter, and more coherent X-ray sources, such as X-ray Free-Electron Lasers (XFELs), represents a tremendous growth in the potential to apply coherent X-rays to determine the structure of materials from the micron-scale down to the Angstrom-scale. There is a significant need for a multi-physics simulation framework to perform source-to-detector simulations for a single particle imaging experiment, including (i) the multidimensional simulation of the X-ray source; (ii) simulation of the wave-optics propagation of the coherent XFEL beams; (iii) atomistic modelling of photon-material interactions; (iv) simulation of the time-dependent diffraction process, including incoherent scattering; (v) assembling noisy and incomplete diffraction intensities into a three-dimensional data set using the Expansion-Maximisation-Compression (EMC) algorithm and (vi) phase retrieval to obtain structural information. We demonstrate the framework by simulating a single-particle experiment for a nitrogenase iron protein using parameters of the SPB/SFX instrument of the European XFEL. This exercise demonstrably yields interpretable consequences for structure determination that are crucial yet currently unavailable for experiment design.}
+      \field{issn}{2045-2322}
+      \field{journaltitle}{Scientific reports}
+      \field{month}{01}
+      \field{title}{A comprehensive simulation framework for imaging single particles and biomolecules at the European X-ray Free-Electron Laser.}
+      \field{volume}{6}
+      \field{year}{2016}
+      \field{pages}{24791}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/srep24791
+      \endverb
+      \verb{file}
+      \verb :Yoon2016.pdf:PDF;Supplementary material:Yoon2016_supp.pdf:PDF
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/srep/2016/160425/srep24791/full/srep24791.html
+      \endverb
+    \endentry
+    \entry{Fortmann-Grote2017b}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=5806dbaa510782460014e7dd1a6e19cb}{%
+           family={Fortmann-Grote},
+           family_i={F\bibinithyphendelim G\bibinitperiod},
+           given={C.},
+           given_i={C\bibinitperiod}}}%
+        {{hash=b9979465690f8558e988e7d1223d8e0e}{%
+           family={Bielecki},
+           family_i={B\bibinitperiod},
+           given={J.},
+           given_i={J\bibinitperiod}}}%
+        {{hash=b1d903bf240c886b2cb39b768384d8ce}{%
+           family={Jurek},
+           family_i={J\bibinitperiod},
+           given={Z.},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=aa19a278ae5c87854f70a6a8a4ee0a63}{%
+           family={Santra},
+           family_i={S\bibinitperiod},
+           given={R.},
+           given_i={R\bibinitperiod}}}%
+        {{hash=986adf762f3d55af08d6b45c45ac330e}{%
+           family={Ziaja-Motyka},
+           family_i={Z\bibinithyphendelim M\bibinitperiod},
+           given={B.},
+           given_i={B\bibinitperiod}}}%
+        {{hash=d864ccafeb1240b69a28b7f6250b8d13}{%
+           family={Mancuso},
+           family_i={M\bibinitperiod},
+           given={A.\bibnamedelimi P.},
+           given_i={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{de1aaf757c1719b588bd984708f5a2a4}
+      \strng{fullhash}{f562f42217be34b81f689ff607b296b9}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We employ start\x{fffd}\x{fffd}\x{fffd}to-end simulations to model coherent diffractive imaging of single biomolecules using x-ray free electron lasers. This technique is expected to yield new structural information about biologically relevant macromolecules thanks to the ability to study the isolated sample in its natural environment as opposed to crystallized or cryogenic samples. The effect of the solvent on the diffraction pattern and interpretability of the data is an open question. We present first results of calculations where the solvent is taken into account explicitly. They were performed with a molecular dynamics scheme for a sample consisting of a protein and a hydration layer of varying thickness. Through R\x{fffd}\x{fffd}\x{fffd}factor analysis of the simulated diffraction patterns from hydrated samples, we show that the scattering background from realistic hydration layers of up to 3 \&Aring; thickness presents no obstacle for the resolution of molecular structures at the sub\x{fffd}\x{fffd}\x{fffd}nm level.}
+      \field{booktitle}{Proc. SPIE}
+      \field{eventtitle}{SPIE Optical Engineering + Applications}
+      \field{month}{08}
+      \field{title}{Simulations of single-particle imaging of hydrated proteins with x-ray free-electron lasers}
+      \field{volume}{10388}
+      \field{year}{2017}
+      \field{pages}{103880M}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1117/12.2275274
+      \endverb
+      \verb{file}
+      \verb Fortmann-Grote2017b.pdf:Fortmann-Grote2017b.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Fortmann-Grote2017}{article}{}
+      \name{author}{13}{}{%
+        {{hash=914077461f9dd9963381825af4b6645c}{%
+           family={Fortmann-Grote},
+           family_i={F\bibinithyphendelim G\bibinitperiod},
+           given={Carsten},
+           given_i={C\bibinitperiod}}}%
+        {{hash=11e8710bef7a5378338e9201a30ec284}{%
+           family={Buzmakov},
+           family_i={B\bibinitperiod},
+           given={Alexey},
+           given_i={A\bibinitperiod}}}%
+        {{hash=4325af6f5aa392ba31bdd3f064d0cac8}{%
+           family={Jurek},
+           family_i={J\bibinitperiod},
+           given={Zoltan},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=7c76cda20ab46c3e284a6576ae71a019}{%
+           family={Loh},
+           family_i={L\bibinitperiod},
+           given={Ne-Te\bibnamedelima Duane},
+           given_i={N\bibinithyphendelim T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a9e0fefb770ae4b9b4b3aa235bcfab44}{%
+           family={Samoylova},
+           family_i={S\bibinitperiod},
+           given={Liubov},
+           given_i={L\bibinitperiod}}}%
+        {{hash=9c1bfa242982cad829f1c2d061c0137d}{%
+           family={Santra},
+           family_i={S\bibinitperiod},
+           given={Robin},
+           given_i={R\bibinitperiod}}}%
+        {{hash=77c5f11a9951fe6e2c69d089bab355b5}{%
+           family={Schneidmiller},
+           family_i={S\bibinitperiod},
+           given={Evgeny\bibnamedelima A.},
+           given_i={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b3a5b6f32f28881b822d7fc4269381d0}{%
+           family={Tschentscher},
+           family_i={T\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+        {{hash=32a51c3047e4c097d31977e23ee39156}{%
+           family={Yakubov},
+           family_i={Y\bibinitperiod},
+           given={Sergey},
+           given_i={S\bibinitperiod}}}%
+        {{hash=8c7bb7643e7418e6b14b2ccf179ccbd9}{%
+           family={Yoon},
+           family_i={Y\bibinitperiod},
+           given={Chun\bibnamedelima Hong},
+           given_i={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ea32d13159a3a549d6c3259176477e6c}{%
+           family={Yurkov},
+           family_i={Y\bibinitperiod},
+           given={Michael\bibnamedelima V.},
+           given_i={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=a0fc1795b03b35eb43cf660281c811ee}{%
+           family={Ziaja-Motyka},
+           family_i={Z\bibinithyphendelim M\bibinitperiod},
+           given={Beata},
+           given_i={B\bibinitperiod}}}%
+        {{hash=77e1bfc0a49d3cb56c89489fd5563ad8}{%
+           family={Mancuso},
+           family_i={M\bibinitperiod},
+           given={Adrian\bibnamedelima P.},
+           given_i={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{44a80696e8e2a4382cfc1b3f17bbdbe2}
+      \strng{fullhash}{6151e7b4c6015fa8bab51a70916bc5c5}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Single-particle imaging with X-ray free-electron lasers (XFELs) has the potential to provide structural information at atomic resolution for non-crystalline biomolecules. This potential exists because ultra-short intense pulses can produce interpretable diffraction data notwithstanding radiation damage. This paper explores the impact of pulse duration on the interpretability of diffraction data using comprehensive and realistic simulations of an imaging experiment at the European X-ray Free-Electron Laser. It is found that the optimal pulse duration for molecules with a few thousand atoms at 5keV lies between 3 and 9fs.}
+      \field{journaltitle}{IUCrJ}
+      \field{month}{09}
+      \field{number}{5}
+      \field{title}{{Start-to-end simulation of single-particle imaging using ultra-short pulses at the European X-ray Free-Electron Laser}}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{pages}{560\bibrangedash 568}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1107/S2052252517009496
+      \endverb
+      \verb{file}
+      \verb Fortmann-Grote2017.pdf:Fortmann-Grote2017.pdf:PDF
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S2052252517009496
+      \endverb
+      \keyw{single-particle imaging,X-ray free-electron lasers,simulations,diffraction,scattering}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

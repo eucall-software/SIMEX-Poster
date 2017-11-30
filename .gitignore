@@ -6,7 +6,6 @@ tikzposter-template.tex
 *.fls
 *.log
 *.pdf
-*.bbl
 *.bcf
 *.blg
 *.out

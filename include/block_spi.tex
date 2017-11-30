@@ -1,59 +1,65 @@
-\block[bodyoffsetx=0pt]{Dependence of single--particle diffraction interpretability on XFEL pulse
+\block[titleoffsety=20pt,bodyoffsety=20pt,bodyoffsetx=0pt]{Dependence of single--particle diffraction interpretability on XFEL pulse
   duration\cite{Fortmann-Grote2017}}{%
-  \begin{minipage}[t]{.95\colwidth}%
-    \mbox{}%
-    \begin{minipage}[][][t]{.320\textwidth}%
-      \innerblock[titleleft]{Experiment schema\cite{Mancuso2013}}{%
-        \begin{center}%
-          \includegraphics[width=0.95\textwidth,angle=0,clip]{single_particle_imaging_scheme_shaded_bg+2nip.png}%
-        \end{center}%
-      }%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[][][t]{.670\textwidth}%
-      \innerblock[titleleft]{Radiation damage simulation\cite{Jurek2016}}{%
-        \begin{center}%
-          \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_3fs}%
-          \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_9fs}%
-          \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_30fs}%
-        \end{center}%
-      }%
-    \end{minipage}\\[1ex]%
-    \mbox{}%
-    \begin{minipage}[][][t]{.555\textwidth}%
-      \innerblock[titleleft]{Photon counts vs. pulse duration}%
-      {%
-        \begin{center}%
-          \includegraphics[width=.95\textwidth,angle=0,clip]{scattering_vs_pulseduration}%
-        \end{center}%
-      }%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[][][t]{.435\textwidth}%
-      \innerblock[titleleft]{Coefficient of variation\cite{Yoon2016}}%
-      {%
-        \begin{center}%
-          %Normalized rms variation as function of resolution, averaged over 5 EMC orientations
-          \includegraphics[width=.95\textwidth,angle=0,clip]{varcoeff_3-9-30-crop}%
-        \end{center}%
-      }%
-    \end{minipage}%
-              %{\small%
-                %\begin{equation*}
-                  %\sigma_\text{v}(q) = \frac{1}{M_q}\sum_{\mathbf{q}: |\mathbf{q}|=q} \frac{ \sqrt{\frac{1}{N} \sum_{i=1}^N \left( I_i(\mathbf{q}) - \langle I(\mathbf{q})\rangle_N \right)^2 } } { \langle I(\mathbf{q})\rangle_N }
-                  %\label{eqn:coeff_variation}
-                %\end{equation*}
-              %}
-              %\hspace*{.05\textwidth}
-              %\includegraphics[width=.4\textwidth,angle=0,clip]}%
-              %\hfill
-              %\includegraphics[width=.4\textwidth,angle=0,clip]{varcoeff_3scaled-9-crop}%
-              %\hspace*{.05\textwidth}
-            %\end{center}
-          %\end{minipage}\\[1ex]
-          %\textbf{Ultra--short 3 fs pulses do not contain enough photons to produce
-          %reliable diffraction data despite negligible radiation damage}
-  \end{minipage}
-}
+    \begin{minipage}[t]{.95\colwidth}%
+      \mbox{}%
+      \begin{minipage}[][][t]{.320\textwidth}%
+        \innerblock[titleleft]{Experiment schema}{%
+          \begin{center}%
+            \includegraphics[width=0.95\textwidth,angle=0,clip]{single_particle_imaging_scheme_shaded_bg+2nip.png}%
+          \end{center}%
+        }%
+      \end{minipage}%
+      \hfill%
+      \begin{minipage}[][][t]{.670\textwidth}%
+        \innerblock[titleleft]{Radiation damage simulation}{%
+          \begin{center}%
+            \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_3fs}%
+            \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_9fs}%
+            \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_30fs}%
+          \end{center}%
+        }%
+      \end{minipage}\\[1ex]%
+      \begin{minipage}[][][t]{\textwidth}%
+        \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]
+        {Reconstructed 3D diffraction volumes and coefficient of variation}
+        {%
+          \vspace*{2ex}
+          \begin{minipage}[ ]{\textwidth}
+            \begin{center}
+              \mbox{}%
+              \begin{minipage}[][][t]{.53\textwidth}
+                \includegraphics[width=.99\textwidth,angle=0,clip]{scattering_vs_pulseduration}\\
+                {\small Photon counts and scattering efficiency vs.
+                pulse duration }
+              \end{minipage}
+              \begin{minipage}[][][t]{.43\textwidth}
+                \includegraphics[width=.9\textwidth,angle=0,clip]{diffr_orient_flow}
+              \end{minipage}
+              {\small%
+                \begin{equation*}
+                  \sigma_\text{V}(k) = \Bigg\langle
+                  \frac{
+                    \sqrt{
+                      \langle I(\mathbf{k})^{2}\rangle_N - \langle I(\mathbf{k})\rangle_N^{2}
+                    }
+                  }{
+                    \langle I(\mathbf{k})\rangle_N
+                  }
+                  \Bigg\rangle_{\mathbf{k}: |\mathbf{k}| = k}\,\ N=5
+                  \text{\ (number of EMC runs)}
+                  \label{eqn:coeff_variation}
+                \end{equation*}
+              }
+              \hspace*{.05\textwidth}
+              \includegraphics[width=.4\textwidth,angle=0,clip]{varcoeff_3-9-30-crop}%
+              \hfill
+              \includegraphics[width=.4\textwidth,angle=0,clip]{varcoeff_3scaled-9-crop}%
+              \hspace*{.05\textwidth}
+            \end{center}
+          \end{minipage}\\[1ex]
+        }
+      \end{minipage}
+    \end{minipage}
+  }
 
 
