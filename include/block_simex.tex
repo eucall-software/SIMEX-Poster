@@ -1,23 +1,23 @@
 \block[titleoffsety=20pt, bodyoffsety=20pt, bodyoffsetx=0pt]{%
   SIMEX: A generic simulation platform for photon science experiments\cite{Fortmann-Grote2017a}%
 }{%
-  \begin{minipage}{0.95\textwidth}%
-    \mbox{}%
-    \begin{minipage}[][][t]{.645\textwidth}
-      \innerblock[titleleft]{Start--to--end simulations\cite{Yoon2016}}{%
+  \begin{minipage}{0.95\textwidth}\mbox{}% KEEP ME HERE
+    %\begin{minipage}[][][t]{.645\textwidth}
+      %\innerblock[titleleft]{Start--to--end simulations\cite{Yoon2016}}{%
+        %\begin{center}%
+          %\includegraphics[width=0.95\textwidth,angle=0,clip, viewport=0 0 760 250]{s2e_schema-crop}%
+        %\end{center}%
+      %}
+    %\end{minipage}%
+    %\hfill%
+    \begin{minipage}[][][t]{.44\textwidth}
+      \innerblock[titleleft]{Source--to--detector simulation workflow}{%
         \begin{center}%
-          \includegraphics[width=0.95\textwidth,angle=0,clip, viewport=0 0 760 250]{s2e_schema-crop}%
+          \includegraphics[width=0.9\textwidth,angle=0,clip]{simex_workflow_slide-crop}%
         \end{center}%
       }
     \end{minipage}%
     \hfill%
-    %\begin{minipage}[][][t]{.42\textwidth}
-      %\innerblock[titleleft]{Data flow in SIMEX}{%
-        %\begin{center}%
-          %\includegraphics[width=0.9\textwidth,angle=0,clip]{simex_workflow_slide-crop}%
-        %\end{center}%
-      %}
-    %\end{minipage}%
   %%\end{minipage}%
     %\\[2ex]%
   %%\begin{minipage}{.9\textwidth}%
@@ -30,12 +30,21 @@
       %}
     %\end{minipage}%
     %\hfill%
-    \begin{minipage}[][][t]{.345\textwidth}
+       \begin{minipage}[][][t]{.2\textwidth}
+      \innerblock[titleleft]{Simulation APIs}{%
+        \begin{center}%
+          \includegraphics[width=0.95\textwidth,angle=0,clip]{calculators_hierarchy-crop}
+        \end{center}%
+      }%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[][][t]{.35\textwidth}
       \innerblock[titleleft]{Supported simulation codes}{%
         \begin{center}%
           \includegraphics[width=0.95\textwidth,angle=0,clip]{simex_backengines}
         \end{center}%
       }%
     \end{minipage}%
+
   \end{minipage}%
 }%
