@@ -11,3 +11,5 @@ tikzposter-template.tex
 *.out
 *.run.xml
 *.synctex.gz
+*.bbl
+*.tex.latexmain
