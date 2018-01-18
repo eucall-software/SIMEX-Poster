@@ -1,6 +1,25 @@
-\block[titleoffsety=20pt,bodyoffsety=20pt,bodyoffsetx=0pt]{Hydration shell effects on SPI
-  signal\cite{Fortmann-Grote2017b}}{%
-    \innerblock[titleleft]{Diffraction simulation for hydrated proteins}%
+\block[titleoffsety=20pt,bodyoffsety=20pt,bodyoffsetx=0pt]{Single--particle
+  imaging at European XFEL\cite{Fortmann-Grote2017b}}{%
+    \begin{minipage}[t]{.95\colwidth}\mbox{}%
+      \begin{minipage}[][][t]{.320\textwidth}%
+        \innerblock[titleleft]{Experiment schema}{%
+          \begin{center}%
+            \includegraphics[width=0.95\textwidth,angle=0,clip]{single_particle_imaging_scheme_shaded_bg+2nip.png}%
+          \end{center}%
+        }%
+      \end{minipage}%
+      \hfill%
+      \begin{minipage}[][][t]{.670\textwidth}%
+        \innerblock[titleleft]{Radiation damage simulation}{%
+          \begin{center}%
+            \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_3fs}%
+            \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_9fs}%
+            \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_30fs}%
+          \end{center}%
+        }%
+      \end{minipage}
+    \end{minipage}
+    \innerblock[titleleft]{Solvent impact on signal quality}%
     {%
     \begin{minipage}[ ]{.9\colwidth}
         \hspace*{.1225\textwidth}%
@@ -31,26 +50,6 @@
       \begin{center}
         \includegraphics[width=.495\textwidth,angle=0,clip]{ai_trace_vs_layer_thickness}%
         \includegraphics[width=.499\textwidth,angle=0,clip]{r_factor_vs_layer_thickness}%
-      \end{center}
-    \end{minipage}
-    }%
-    %\\%
-    \innerblock[titleleft]{Molecular Dynamics simulations}%
-    {%
-    \begin{minipage}[ ]{.9\colwidth}
-      \begin{center}
-        \includegraphics[width=.4\textwidth,angle=0,clip]{2nip_in_H2O_mdbox}%
-        \includegraphics[width=.59\textwidth,angle=0,clip]{md_pdf}%
-      \end{center}
-    \end{minipage}
-    }%
-    %\\%
-    \innerblock[titleleft]{Sanity check: Water ring}
-    {%
-    \begin{minipage}[ ]{.9\colwidth}
-      \begin{center}
-        \includegraphics[width=.495\textwidth,angle=0,clip]{sphere100_h2o_pattern_24keV}%
-        \includegraphics[width=.499\textwidth,angle=0,clip]{sphere100_h2o_singFEL_vs_Huang2011}%
       \end{center}
     \end{minipage}
     }%
