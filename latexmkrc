@@ -1,6 +1,5 @@
 $pdf_mode=1; # Generate pdf with pdflatex
-$pdf_previewer="evince %O %S";
-@default_files = ("BioAtXFELs_2017.tex");
+@default_files = ("poster.tex");
 
 # Cleanup settings.
 $cleanup_includes_generated = 1;
