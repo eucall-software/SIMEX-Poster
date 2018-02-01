@@ -1,7 +1,16 @@
 \block{}{%
-    \sloppy\tiny%
-\begin{center}
-  \mbox{}\vspace{-7\baselineskip}
-  \printbibliography[heading=none]
-\end{center}
+  \begin{minipage}[t]{.95\colwidth}%
+    \small%
+    \begin{minipage}[][][t]{.85\textwidth}%
+      \AtNextBibliography{\small}
+      \printbibliography
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[][][t]{.125\textwidth}%
+      \begin{center}%
+        Poster pdf~(1.5 MB)\\%
+        \includegraphics[width=\textwidth]{qrcode.png}%
+      \end{center}%
+    \end{minipage}
+  \end{minipage}
 }

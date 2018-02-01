@@ -1,5 +1,5 @@
-\block[titleoffsety=20pt,bodyoffsety=20pt,bodyoffsetx=0pt]{Single--particle
-  imaging at European XFEL\cite{Fortmann-Grote2017b}}{%
+\block[titleoffsety=0pt,bodyoffsety=0pt,bodyoffsetx=0pt]{Single--particle
+  imaging (European XFEL)}{%
     \begin{minipage}[t]{.95\colwidth}\mbox{}%
       \begin{minipage}[][][t]{.320\textwidth}%
         \innerblock[titleleft]{Experiment schema}{%
@@ -10,7 +10,8 @@
       \end{minipage}%
       \hfill%
       \begin{minipage}[][][t]{.670\textwidth}%
-        \innerblock[titleleft]{Radiation damage simulation}{%
+        \innerblock[titleleft]{Radiation damage
+          simulation~\cite{Jurek2016,Yoon2016,Fortmann-Grote2017}}{%
           \begin{center}%
             \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_3fs}%
             \includegraphics[width=.329\textwidth,angle=0,clip]{pmi_9fs}%
@@ -19,7 +20,41 @@
         }%
       \end{minipage}
     \end{minipage}
-    \innerblock[titleleft]{Solvent impact on signal quality}%
+    %\begin{minipage}[][][t]{0.95\colwidth}%
+      %\innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]
+      %{Orientation of diffraction patterns and coefficient of
+        %variation~\cite{Yoon2016,Fortmann-Grote2017}}{%
+        %\begin{center}
+              %%\begin{minipage}[][][t]{.53\textwidth}
+                %%\includegraphics[width=.99\textwidth,angle=0,clip]{scattering_vs_pulseduration}\\
+                %%{\small Photon counts and scattering efficiency vs.
+                %%pulse duration }
+              %%\end{minipage}
+              %%\begin{minipage}[][][t]{.43\textwidth}
+                %%\includegraphics[width=.9\textwidth,angle=0,clip]{diffr_orient_flow}
+              %%\end{minipage}
+          %\includegraphics[width=.40\textwidth,angle=0,clip]{diffr_orient_flow}
+          %\hfill
+          %\includegraphics[width=.50\textwidth,angle=0,clip]{varcoeff_3-9-30-crop}%
+          %{\small%
+            %\begin{equation*}
+              %\sigma_\text{V}(k) = \Bigg\langle
+              %\frac{
+                %\sqrt{
+                  %\langle I(\mathbf{k})^{2}\rangle_N - \langle I(\mathbf{k})\rangle_N^{2}
+                %}
+              %}{
+                %\langle I(\mathbf{k})\rangle_N
+              %}
+              %\Bigg\rangle_{\mathbf{k}: |\mathbf{k}| = k}\,\ N=5
+              %\text{\ (number of EMC runs)}
+              %\label{eqn:coeff_variation}
+            %\end{equation*}
+          %}
+        %\end{center}
+      %}
+    %\end{minipage}
+    \innerblock[titleleft]{Solvent impact on signal quality~\cite{Fortmann-Grote2017b}}%
     {%
     \begin{minipage}[ ]{.9\colwidth}
         \hspace*{.1225\textwidth}%
@@ -42,7 +77,6 @@
       \end{center}
     \end{minipage}
     }%
-    %\\%
     \innerblock[titleleft]{Tolerable solvent layer thickness for high resolution
     imaging}
     {%

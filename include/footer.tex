@@ -1,33 +1,29 @@
-\block{}{%
-\vspace*{-4ex}
-\begin{tikzpicture}%
-  \draw (0,0) -- ( \textwidth - 4.5cm, 0);
-\end{tikzpicture}\\[1ex]
-\mbox{}
-\begin{minipage}[][][t]{0.25\textwidth}%
-  \noindent%
-  {\sf%
-  Contact: carsten.grote@xfel.eu\\%
-  \noindent%
-  Webpage: www.eucall.eu\\[2ex]
-  }%
-  \begin{minipage}{\textwidth}
-    \mbox{}%
-    \begin{minipage}[][][t]{0.2\textwidth}%
-      \includegraphics[width=1.0\textwidth]{eu-flag}%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[][][t]{0.79\textwidth}%
-    \small%
-    This project has received funding from the \textit{European Union's Horizon 2020 research and
-    innovation programme} under grant agreement No 654220.
-    \end{minipage}%
-  \end{minipage}
-\end{minipage}%
-\hfill%
-\begin{minipage}[][][t]{0.35\textwidth}%
-  \includegraphics[width=\textwidth,angle=0,clip]{eucall_institutes}%
-\end{minipage}%
-\hspace*{10pt}%
-
-}%
+\block[bodyoffsety=3ex]{}{%
+\begin{minipage}{0.9\colwidth}
+  \vspace*{-3ex}%
+  \mbox{}%
+  %\begin{tikzpicture}%
+    %\draw (0,0) -- ( \textwidth, 0);
+  %\end{tikzpicture}\\[1ex]
+  %\begin{minipage}[][][t]{0.2\textwidth}%
+    %\noindent%
+    %{\sf%
+      %Contact: carsten.grote@xfel.eu\\%
+      %\noindent%
+      %Webpage: www.eucall.eu
+    %}%
+  %\end{minipage}%
+  %\hfill%
+  \begin{minipage}[][][t]{0.125\textwidth}%
+    \includegraphics[width=1.0\textwidth]{eu-flag}%
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[][][t]{0.85\textwidth}%
+    {%
+      \small%
+      This project has received funding from the \textit{European Union's Horizon 2020 research and
+      innovation programme} under grant agreement No 654220.
+    }
+  \end{minipage}%
+\end{minipage}
+}

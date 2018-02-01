@@ -1,27 +1,32 @@
-\block[bodyoffsetx=-10pt]{X-ray diagnostics of warm dense matter}{%
+\block[bodyoffsetx=-10pt]{X-ray diagnostics of warm dense matter (ESRF
+  ID24)}{%
   \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{%
-    Target optimization for laser shock compression experiments at ESRF ID24}{%
+    Target optimization for laser shock compression
+    experiments~\cite{Torchio2016} with 1D rad-hydro code
+    Esther~\cite{Colombier2005}}{%
     \begin{center}
+      \includegraphics[width=0.45\colwidth,angle=0,clip]{torchio2016_setup.png}%
       \includegraphics[width=0.45\colwidth,angle=0,clip]{rad-hydro_optimization_flowchart}%
-      \includegraphics[width=0.45\colwidth,angle=0,clip]{wdm_target_optimization-crop}%
     \end{center}%
   }%
   \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{%
-    Source and beamline simulations with Oasys}{%
+    Application: Optimizing Fe-CH sandwich target}{%
     \begin{center}%
-      \includegraphics[width=0.45\colwidth,angle=0,clip]{oasys_id24}%
-      \includegraphics[width=0.25\colwidth,angle=0,clip]{oasys_id24_intensity_profile}%
-      %\includegraphics[width=0.05\colwidth,angle=0,clip]{oasys_id24_spectrum}%
-
+      \includegraphics[width=0.8\colwidth,angle=0,clip]{wdm_target_optimization-crop}%
     \end{center}%
   }%
   \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{%
-    EXAFS/XANES simulation with FEFF}{%
+    Source and beamline simulations with Oasys~\cite{Rebuffi2016}}{%
     \begin{center}%
-      %\includegraphics[width=0.45\colwidth,angle=0,clip]{feff_exafs_Fe_ambient}%
-      %\includegraphics[width=0.45\colwidth,angle=0,clip]{feff_exafs_Fe_compressed}%
+      \includegraphics[width=0.7\colwidth,angle=0,clip]{oasys_id24}%
+      \includegraphics[width=0.24\colwidth,angle=0,clip]{oasys_id24_intensity_profile}%
       %\includegraphics[width=0.05\colwidth,angle=0,clip]{oasys_id24_spectrum}%
-
+    \end{center}%
+  }%
+  \innerblock[titleleft, titleoffsetx=10pt, bodyoffsetx=10pt]{%
+    X--ray absorption simulation with FEFF\cite{Rehr2009}}{%
+    \begin{center}%
+      \includegraphics[width=0.90\colwidth,angle=0,clip]{Ta_feff-crop}%
     \end{center}%
   }%
 }%
